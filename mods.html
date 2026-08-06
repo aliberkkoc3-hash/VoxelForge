@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modlar - Voxel Forge</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="networkCanvas"></canvas>
+    <nav class="navbar glass">
+        <div class="logo"><i class="fa-solid fa-cube"></i> VOXEL FORGE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="mods.html" class="active">Modlar</a></li>
+            <li><a href="bots.html">Botlar</a></li>
+            <li><a href="games.html">Oyunlar</a></li>
+            <li><a href="sites.html">Siteler</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- AKTİF PROJELER BÖLÜMÜ -->
+    <section class="container page-header">
+        <h1 class="pixel-text-sm">// MINECRAFT MODLARI</h1>
+        <p class="glass-text">Şu anda geliştirilmeye devam eden, güncel ve kullanılabilir mod paketleri.</p>
+    </section>
+
+    <section class="container content-grid">
+        <!-- RUSTHUD -->
+        <div class="detail-card">
+            <h3>RUSTHUD INTERFACE</h3>
+            <p>Minecraft deneyimini Rust oyunundaki gibi minimal ve bilgilendirici hale getiren arayüz modu. Sağlık,
+                açlık ve zırh değerleri ekranın ortasında dinamik olarak değişir.</p>
+            <div class="tags">
+                <span>CONTINUE</span><span>MCREATOR</span><span>v0.0.5</span><span>FORGE</span><span>JAVA</span><span>1.20.1</span>
+            </div>
+            <a href="https://github.com/aliberkkoc3-hash/rusthud-interface" target="_blank" class="mod-btn">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+            </a>
+        </div>
+
+        <!-- ALICRAFT -->
+        <div class="detail-card">
+            <h3>ALICRAFT</h3>
+            <p>Minecraft dünyasına benzersiz doku paketi getiren mod paketi. Yeni bloklar, eşyalar ve yaratıklarla dolu,
+                keşfedilmeyi bekleyen bir macera.</p>
+            <div class="tags">
+                <span>CONTINUE</span><span>MCREATOR</span><span>v0.0.1</span><span>FORGE</span><span>JAVA</span><span>1.20.1</span>
+            </div>
+            <a href="https://github.com/aliberkkoc3-hash/alicraft" target="_blank" class="mod-btn">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+            </a>
+        </div>
+
+        <!-- FLUX LOGIC -->
+        <div class="detail-card archive-card">
+            <h3>FLUX LOGIC</h3>
+            <p>Minecraft dünyasına gelişmiş enerji ve redstone mekanikleri eklemeyi hedefleyen mod paketi. Yeni bloklar ve otomasyon sistemleri üzerinde çalışılmış ancak geliştirme süreci <strong>durdurulmuştur</strong>.</p>
+            <div class="tags">
+                <span class="tag-discontinued">DISCONTINUED</span>
+                <span>MCREATOR</span>
+                <span>v0.0.1</span>
+                <span>FORGE</span>
+                <span>JAVA</span>
+                <span>1.20.1</span>
+            </div>
+            <a href="https://github.com/aliberkkoc3-hash/flux-logic" target="_blank" class="mod-btn archive-btn">
+                <i class="fa-solid fa-box-archive"></i> Arşivi İncele
+            </a>
+        </div>
+
+        <!-- TRAFFICCRAFT -->
+        <div class="detail-card archive-card">
+            <h3>TRAFFICCRAFT</h3>
+            <p>Minecraft dünyasına gerçekçi trafik ve araç mekanikleri ekleyen mod paketi. Geliştirme sürecinde <strong>teknik kısıtlamalar</strong> nedeniyle durdurulmuştur.</p>
+            <div class="tags">
+                <span class="tag-discontinued">DISCONTINUED</span>
+                <span>MCREATOR</span>
+                <span>v0.0.1</span>
+                <span>FORGE</span>
+                <span>JAVA</span>
+                <span>1.20.1</span>
+            </div>
+            <a href="https://github.com/aliberkkoc3-hash/trafficcraft" target="_blank" class="mod-btn archive-btn">
+                <i class="fa-solid fa-box-archive"></i> Arşivi İncele
+            </a>
+        </div>
+
+        <!-- AliPhysics -->
+        <div class="detail-card archive-card">
+            <h3>AliPhysics</h3>
+            <p>Minecraft dünyasına gelişmiş fizik ve hareket mekanikleri eklemeyi hedefleyen mod paketi. Geliştirme süreci <strong>teknik zorluklar</strong> nedeniyle durdurulmuştur.</p>
+            <div class="tags">
+                <span class="tag-discontinued">DISCONTINUED</span>
+                <span>MCREATOR</span>
+                <span>v0.0.1</span>
+                <span>FORGE</span>
+                <span>Physics</span>
+                <span>JAVA</span>
+                <span>1.20.1</span>
+            </div>
+            <a href="https://github.com/aliberkkoc3-hash/alicraft" target="_blank" class="mod-btn archive-btn">
+                <i class="fa-solid fa-box-archive"></i> Arşivi İncele
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Voxel Forge. Ali Berk ve The Pixel Devs tarafından kodlandı. | <strong>TÜM HAKLARI SAKLIDIR</strong></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
