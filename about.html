@@ -1,22 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
-
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Hakkımda - Voxel Forge</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <canvas id="networkCanvas"></canvas>
     <nav class="navbar glass">
         <div class="logo"><i class="fa-solid fa-cube"></i> VOXEL FORGE</div>
         <ul class="nav-links">
             <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="FNF.html">FNF</a></li>
             <li><a href="mods.html">Modlar</a></li>
             <li><a href="bots.html">Botlar</a></li>
             <li><a href="games.html">Oyunlar</a></li>
@@ -27,25 +24,20 @@
     </nav>
     <section class="container page-header">
         <h1 class="pixel-text-sm">// GELİŞTİRİCİ PROFİLİ</h1>
+        <p class="glass-text">Sistem mimarı, oyun geliştirici ve dijital zanaatkarın hikayesi.</p>
     </section>
-    <section class="container" style="max-width: 800px">
-        <div class="detail-card">
-            <h3>Merhaba, Ben AliBerk</h3>
-            <p>
-                Ad tercihlerim Ali Berk, Ali, Aliş, Çetin ve Berk şeklindedir. 16
-                yaşındayım ve öğrenciyim. Ana dilim Türkçe, ikinci dilim İngilizcedir.
-                İngilizceye ilkokuldan beri büyük ilgi duyuyorum ve öğrenmeyi
-                seviyorum. Yazılım, teknoloji ve oyun geliştirme en büyük ilgi
-                alanlarımdandır. HTML, CSS ve JavaScript ile uğraşıyorum. Unity,
-                Godot, Roblox Studio ve Construct gibi oyun geliştirme araçlarıyla
-                ilgileniyorum. Minecraft mod geliştirmeyi seviyorum ve bunun için
-                BlockBench ile MCreator kullanıyorum. Oyun motorlarını kurcalamaktan
-                ve yeni şeyler keşfetmekten hoşlanıyorum. Pixel Art yapmayı seviyorum.
-                Bilgisayarda Piskel kullanıyorum, telefonda da pixel art
-                uygulamalarıyla çizimler yapıyorum. Boş zamanlarımda müzik dinlemeyi,
-                bisiklet sürmeyi ve dışarıda top oynamayı seviyorum.
+    <section class="container about-container">
+        <div class="detail-card about-card">
+            <h3>Merhaba, Ben Ali Berk</h3>
+            <p class="about-bio">
+                Tercih edilen isimlerim Ali Berk, Ali, Aliş, Çetin ve Berk şeklindedir. 16 yaşında bir yazılım geliştirici ve öğrenciyim. Ana dilim Türkçe, ikinci dilim ise ilkokul yıllarından beri büyük bir tutkuyla geliştirdiğim ileri düzey İngilizcedir.<br><br>
+                Teknoloji ve oyun geliştirme dünyasının derinliklerinde kaybolmayı seviyorum. HTML, CSS, JavaScript, Node.js ve Java dillerinin yanı sıra; tutkulu bir <strong>FNF Haxe Developer</strong> olarak rhythm oyun motorları ve özel mod altyapıları üzerinde çalışıyorum. Unity, Godot, Roblox Studio (Lua) ve Construct gibi motorları kurcalıyor; Minecraft moding için BlockBench & MCreator ikilisini aktif olarak kullanıyorum. Piskel ve mobil araçlarla Pixel Art tasarımlar üretmek vazgeçilmez hobilerim arasında.<br><br>
+                Kod yazmadığım zamanlarda ise müzik dinliyor, bisiklet sürüyor ya da dışarıda top koşturarak enerjimi tazeliyorum.
             </p>
             <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fa-solid fa-bolt"></i> FNF Haxe Developer
+                </div>
                 <div class="skill-item">
                     <i class="fa-brands fa-js"></i> JavaScript / Node.js
                 </div>
@@ -53,10 +45,10 @@
                     <i class="fa-brands fa-java"></i> Java (Minecraft Modding)
                 </div>
                 <div class="skill-item">
-                    <i class="fa-solid fa-layer-group"></i> FullStack (Geliştiriciyim)
+                    <i class="fa-solid fa-layer-group"></i> FullStack Geliştirici
                 </div>
                 <div class="skill-item">
-                    <i class="fa-solid fa-palette"></i> Web Tasarımcısı (UI/UX)
+                    <i class="fa-solid fa-palette"></i> Web Tasarım (UI/UX)
                 </div>
                 <div class="skill-item">
                     <i class="fa-solid fa-gamepad"></i> Unity & Godot Engine
@@ -74,7 +66,7 @@
                     <i class="fa-solid fa-code"></i> Lua (Roblox Studio)
                 </div>
                 <div class="skill-item">
-                    <i class="fa-solid fa-database"></i> Veritabanı Yönetimi (SQL, AliDB ve MangoDB)
+                    <i class="fa-solid fa-database"></i> SQL, AliDB & MongoDB
                 </div>
             </div>
         </div>
@@ -84,5 +76,4 @@
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>

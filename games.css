@@ -1,0 +1,461 @@
+:root {
+    --bg-dark: #030306;
+    --bg-darker: #010103;
+    --glass-bg: rgba(10, 10, 16, 0.7);
+    --glass-border: rgba(255, 170, 0, 0.15);
+    --accent-primary: #00ff9d; /* Neon Yeşil */
+    --accent-warning: #ffaa00; /* Canlı Kehribar */
+    --accent-danger: #ff3c3c;  /* Kritik Tehlike Kırmızısı */
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --text-dim: #475569;
+    --font-pixel: 'Press Start 2P', cursive;
+    --font-main: 'Inter', sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+    
+    /* Gelişmiş Gradientler */
+    --gradient-warning: linear-gradient(135deg, #ffaa00 0%, #ff5500 100%);
+    --gradient-primary: linear-gradient(135deg, #00ff9d 0%, #00f0ff 100%);
+    --gradient-hazard: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 170, 0, 0.15),
+        rgba(255, 170, 0, 0.15) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth; 
+}
+
+/* --- ENDÜSTRİYEL SİBER SCROLLBAR --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-darker); }
+::-webkit-scrollbar-thumb { 
+    background: linear-gradient(180deg, var(--accent-warning), var(--accent-danger));
+    border-radius: 4px; 
+    border: 1px solid var(--bg-darker);
+}
+::-webkit-scrollbar-thumb:hover { 
+    background: var(--accent-warning);
+    box-shadow: 0 0 10px var(--accent-warning);
+}
+
+/* --- SEÇİM RENGİ --- */
+::selection { 
+    background: var(--accent-warning); 
+    color: #000; 
+    text-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Radar & Tarama Çizgisi Arka Plan Efekti */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 170, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 170, 0, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 95%);
+}
+
+/* Tarama Çizgisi (CRT Scanline) Animasyonu */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+#networkCanvas {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: -2; 
+    opacity: 0.4;
+    filter: hue-rotate(15deg); /* Kehribar tonlarına uyum için */
+}
+
+/* --- NAVBAR (CLASSY GLASS) --- */
+.glass, .navbar {
+    background: rgba(5, 5, 8, 0.8); 
+    backdrop-filter: blur(25px) saturate(150%); 
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+    border-bottom: 1px solid rgba(255, 170, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 5%;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000;
+}
+
+.logo { 
+    font-family: var(--font-pixel); 
+    font-size: 0.85rem; 
+    color: var(--accent-primary); 
+    text-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+    letter-spacing: -1px;
+    animation: logoPulse 2.5s infinite alternate;
+}
+
+@keyframes logoPulse {
+    0% { filter: drop-shadow(0 0 5px rgba(0, 255, 157, 0.4)); }
+    100% { filter: drop-shadow(0 0 15px rgba(0, 255, 157, 0.8)); }
+}
+
+.nav-links { list-style: none; display: flex; gap: 25px; }
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text-muted); 
+    font-size: 0.85rem; 
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    font-family: var(--font-code);
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-links a::after {
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0;
+    background-color: var(--accent-primary); 
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px var(--accent-primary);
+}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-links a:hover, .nav-links a.active { 
+    color: var(--text-main); 
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+/* --- SAYFA BAŞLIĞI --- */
+.container { padding: 0 5%; max-width: 1200px; margin: 0 auto; width: 100%; }
+.page-header { 
+    padding: 180px 0 30px; 
+    text-align: center; 
+    animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pixel-text-sm { 
+    font-family: var(--font-pixel); 
+    font-size: 1.1rem; 
+    color: var(--accent-warning); 
+    margin-bottom: 20px; 
+    letter-spacing: -1px;
+    text-shadow: 0 0 15px rgba(255, 170, 0, 0.4);
+    display: inline-block;
+    position: relative;
+}
+
+/* Kritik terminal yanıp sönme animasyonu */
+.pixel-text-sm::after {
+    content: '█';
+    margin-left: 8px;
+    color: var(--accent-warning);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.glass-text { 
+    color: var(--text-muted); 
+    max-width: 600px; 
+    margin: 0 auto; 
+    font-size: 0.98rem; 
+    font-family: var(--font-code);
+    letter-spacing: -0.3px;
+    line-height: 1.7;
+}
+
+/* --- KARTLAR GRID SİSTEMİ --- */
+.content-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
+    gap: 30px; 
+    padding: 20px 5% 100px; 
+    justify-content: center;
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(25px) saturate(140%); 
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    padding: 45px; 
+    border-radius: 20px; 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Kart Üstündeki Dinamik Neon Çizgi */
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-warning), 
+        var(--accent-danger), 
+        transparent);
+    opacity: 0.8;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Hover Sırasında Arka Plana Geçen Tehlike Şeritleri (Industrial Hazard Tape) */
+.detail-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--gradient-hazard);
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detail-card > * {
+    position: relative;
+    z-index: 1; /* İçeriklerin şeridin üstünde kalması için */
+}
+
+.detail-card:hover { 
+    transform: translateY(-8px) scale(1.02); 
+    border-color: rgba(255, 170, 0, 0.4);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6), 
+        0 0 35px rgba(255, 170, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.detail-card:hover::after {
+    opacity: 1;
+}
+
+.detail-card h3 { 
+    font-family: var(--font-code); 
+    margin-bottom: 18px; 
+    color: var(--text-main); 
+    font-size: 1.55rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Başlık yanına uyarı ikonu ekleme desteği */
+.detail-card h3::before {
+    content: '⚠️';
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 5px var(--accent-warning));
+}
+
+.detail-card p { 
+    color: var(--text-muted); 
+    margin-bottom: 30px; 
+    line-height: 1.8; 
+    font-size: 0.96rem; 
+}
+
+/* --- ETİKETLER (TAGS) --- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 35px;
+}
+
+.tags span { 
+    font-family: var(--font-code); 
+    font-size: 0.72rem; 
+    background: rgba(255, 170, 0, 0.03); 
+    border: 1px solid rgba(255, 170, 0, 0.15);
+    padding: 6px 14px; 
+    border-radius: 8px; 
+    color: var(--accent-warning);
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+}
+
+.tags span:hover {
+    color: #030306;
+    background: var(--accent-warning);
+    border-color: var(--accent-warning);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- PREMIUM BUTON (.EXE YOK / UYARI) --- */
+.mod-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 25px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: var(--font-code);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 1px;
+}
+
+.deleted-btn {
+    border: 1px solid rgba(255, 170, 0, 0.3) !important;
+    color: var(--accent-warning) !important;
+    background: rgba(255, 170, 0, 0.02) !important;
+    border-radius: 12px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Butonun hover'da tehlikeli endüstriyel dolgusu (Hazard Stripe Fill) */
+.deleted-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--accent-warning),
+        var(--accent-warning) 12px,
+        #121212 12px,
+        #121212 24px
+    );
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.deleted-btn:hover {
+    color: #ffffff !important;
+    border-color: var(--accent-warning) !important;
+    box-shadow: 
+        0 15px 30px rgba(255, 170, 0, 0.3),
+        0 0 15px rgba(255, 170, 0, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.deleted-btn:hover::before {
+    transform: scaleX(1);
+}
+
+/* İkona glitch efekti ekleyelim */
+.deleted-btn i {
+    font-size: 0.95rem;
+    transition: transform 0.3s;
+}
+
+.deleted-btn:hover i {
+    transform: scale(1.2) rotate(15deg);
+    color: #ffffff;
+    animation: microGlitch 0.2s infinite;
+}
+
+@keyframes microGlitch {
+    0% { transform: translate(0, 0) scale(1.2) rotate(15deg); }
+    50% { transform: translate(-1px, 1px) scale(1.2) rotate(13deg); }
+    100% { transform: translate(1px, -1px) scale(1.2) rotate(17deg); }
+}
+
+/* --- FOOTER --- */
+footer { 
+    text-align: center; 
+    padding: 35px; 
+    color: var(--text-dim); 
+    font-size: 0.8rem; 
+    border-top: 1px solid rgba(255, 170, 0, 0.08); 
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-family: var(--font-code);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 200px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-warning), transparent);
+    box-shadow: 0 0 10px var(--accent-warning);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .page-header { padding-top: 140px; }
+    .content-grid { 
+        grid-template-columns: 1fr; 
+        padding: 20px 5% 70px; 
+        gap: 20px;
+    }
+    .detail-card { padding: 30px 25px; border-radius: 16px; }
+    .pixel-text-sm { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    .detail-card { padding: 25px 20px; }
+    .detail-card h3 { font-size: 1.35rem; }
+}
