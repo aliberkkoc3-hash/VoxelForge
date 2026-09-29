@@ -3,6 +3,10 @@
    ==========================================================
    Yeni mod eklemek için: MODS dizisine yeni bir obje ekle.
    status: "released" | "dev" | "halted" | "soon"
+
+   buttons: bir dizi. Her buton: 
+   { label, icon, url, variant, disabled, reason, action }
+   variant: "primary" (dolgu) | "ghost" (şeffaf) | "mediafire" | "github"
    ========================================================== */
 
 const MODS = [
@@ -28,13 +32,13 @@ const MODS = [
         ],
         note: "Psych Engine'a benzer yapıda ama tamamen bağımsız bir engine'dır.",
         tags: ["Haxe", "Custom Engine", "Görev Sistemi", "Market", "Açık Beta"],
-        buttons: {
-            primary: { label: "Açık Beta Henüz Çıkmadı", icon: "fa-solid fa-hourglass-half", disabled: true, reason: "Açık Beta Daha Çıkmadı" },
-            secondary: { label: "GitHub", icon: "fa-brands fa-github", url: "#" }
-        },
+        buttons: [
+            { label: "Açık Beta Henüz Çıkmadı", icon: "fa-solid fa-hourglass-half", variant: "primary", disabled: true, reason: "Açık Beta Daha Çıkmadı" },
+            { label: "GitHub", icon: "fa-brands fa-github", url: "#", variant: "github", disabled: true, reason: "Repo Henüz Yayında Değil" }
+        ],
         details: {
             title: "🔷 Prism Engine - Açık Beta Öncesi",
-            body: `Prism Engine, tamamen sıfırdan <strong>Haxe</strong> ile yazılmakta olan bağımsız bir Friday Night Funkin' motorudur. 
+            body: `Prism Engine, tamamen sıfırdan <strong>Haxe</strong> ile yazılmakta olan bağımsız bir Friday Night Funkin' motorudur.
 
 <h4>💎 Neler Var?</h4>
 • <strong>Görev Sistemi:</strong> Oyun içi görevleri tamamla, XP ve ödül kazan.
@@ -72,10 +76,11 @@ Prism Engine yapı olarak Psych Engine'a benzese de kod tabanı ve mimarisi tama
             "WelcomeHell.lua"
         ],
         tags: ["Psych Engine", "Cyberpunk", "Bot Mod", "Lua Events", "VSCHARA 2.0"],
-        buttons: {
-            primary: { label: "İndir", icon: "fa-solid fa-download", url: "https://github.com/aliberkkoc3-hash/RhythmX/releases/tag/0.0.3" },
-            secondary: { label: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/aliberkkoc3-hash/RhythmX" }
-        },
+        buttons: [
+            { label: "MediaFire", icon: "fa-solid fa-cloud-arrow-down", url: "https://www.mediafire.com/file/e9fcx67b9eoey7r/RhythmX-0.0.3.zip/file", variant: "mediafire" },
+            { label: "GitHub Release", icon: "fa-brands fa-github", url: "https://github.com/aliberkkoc3-hash/RhythmX/releases/tag/0.0.3", variant: "github" },
+            { label: "Kaynak Kod", icon: "fa-solid fa-code-branch", url: "https://github.com/aliberkkoc3-hash/RhythmX", variant: "ghost" }
+        ],
         details: {
             title: "⚡ RhythmX v0.0.3 - Parmaklara Jimnastik, Ritmik Kaos! 🎤",
             body: `RhythmX, öyle alelade bir Friday Night Funkin' modu değil; bildiğin parmaklarını düğüm yapacak, <strong>VSCHARA(2.0)</strong> moduyla kanka gibi takılan, yerinde duramayan bir canavar. "Bilgisayarım patates, FNF oynarken uçak motoru gibi ses çıkarıyor" diyenleri de düşündük; altyapısı o kadar hafif ki tost makinesinde bile su kaynatmadan çalışır.
@@ -88,9 +93,14 @@ Prism Engine yapı olarak Psych Engine'a benzese de kod tabanı ve mimarisi tama
 • <strong>Hafif ve Hızlı:</strong> Altyapı o kadar optimize ki, sistemini yormaz, sadece müziğe odaklanmanı sağlar.
 
 <h4>📦 Kurulum (İndir, Daldır, Oyna)</h4>
-1. En güncel sürümü (v0.0.3) Releases sayfasından hemen kap gel.
+1. En güncel sürümü (v0.0.3) MediaFire veya GitHub Releases sayfasından hemen kap gel.
 2. İndirdiğin .zip dosyasının içindeki her şeyi <strong>Psych Engine v1.0.4</strong> klasörünün içine bodoslama boşalt.
 3. Oyunu aç, hoparlörün sesini kökle ve ritmin dibine vur! 🎸
+
+<h4>🔗 İndirme Kaynakları</h4>
+• <strong>MediaFire:</strong> Hızlı ve direkt indirme
+• <strong>GitHub Release:</strong> Değişiklik günlüğü ile birlikte
+• <strong>Kaynak Kod:</strong> Modu incelemek veya katkı sağlamak için
 
 <em>FNF tayfası için bolca kahve ve uykusuz geceyle, tutkuyla hazırlandı.</em>`
         }
@@ -110,10 +120,11 @@ Prism Engine yapı olarak Psych Engine'a benzese de kod tabanı ve mimarisi tama
             { icon: "fa-solid fa-wifi", text: "Offline" }
         ],
         tags: ["Mobile Port", "FunkLab", "AutoPlay", "Touch Controls", "Protokol-66"],
-        buttons: {
-            primary: { label: "APK İndir", icon: "fa-solid fa-download", url: "https://github.com/aliberkkoc3-hash/FunkLab-Mobile-Port/releases/tag/v0.1.4" },
-            secondary: { label: "Kaynak", icon: "fa-brands fa-github", url: "https://github.com/aliberkkoc3-hash/FunkLab-Mobile-Port" }
-        },
+        buttons: [
+            { label: "MediaFire APK", icon: "fa-solid fa-cloud-arrow-down", url: "https://www.mediafire.com/file/x26lwxr3aamv7jj/FunkLab-Mobile-Port-0.1.4.zip/file", variant: "mediafire" },
+            { label: "GitHub Release", icon: "fa-brands fa-github", url: "https://github.com/aliberkkoc3-hash/FunkLab-Mobile-Port/releases/tag/v0.1.4", variant: "github" },
+            { label: "Kaynak Kod", icon: "fa-solid fa-code-branch", url: "https://github.com/aliberkkoc3-hash/FunkLab-Mobile-Port", variant: "ghost" }
+        ],
         details: {
             title: "📱 v0.1.4 - Protokol-66: Mobil Sistemsel Hakimiyet",
             body: `Başparmaklar emekli edildi, işlemciler kırbaçlandı! FunkLab artık cebinizdeki en sinsi güç olan <strong>Funk-O-Matic 9000 (Protokol-66)</strong> tarafından yönetiliyor.
@@ -124,6 +135,11 @@ Prism Engine yapı olarak Psych Engine'a benzese de kod tabanı ve mimarisi tama
 • <strong>Mutlak Hassasiyet:</strong> Botun vuruş kalitesini sen belirle! İster kusursuz "SICK" vur, ister +/- 55ms sapmayla "Pro Player" taklidi yap.
 • <strong>Hayalet Skor (Ghost Mode) v2:</strong> Uzun notaların (sustain) puan sızıntıları tamamen tıkandı. Bot notaları tokatlar ama skor tabelasında tek bir dijital iz bile bırakmaz.
 • <strong>Güvenlik & Kararlılık:</strong> InfoHUD, sistem güvenliği ve çökme risklerini sıfırlamak adına tasfiye edildi. Protokol-66 artık daha sessiz ve daha ölümcül.
+
+<h4>🔗 İndirme Kaynakları</h4>
+• <strong>MediaFire APK:</strong> Direkt APK indirme (hızlı)
+• <strong>GitHub Release:</strong> Sürüm notları ve arşiv
+• <strong>Kaynak Kod:</strong> Projeyi keşfet, katkı sağla
 
 <h4>⚠️ Not</h4>
 Bu sürümden sonra telefonunuzun ısınması bir hata değil, botun notaları parçalarken çıkardığı <em>sürtünme ısısıdır</em>.
@@ -203,43 +219,40 @@ function renderTags(tags) {
     </div>`;
 }
 
-function renderButton(btn, isPrimary, modId) {
+/* ---------- Buton Sistemi (Çoklu Buton Destekli) ---------- */
+
+function renderSingleButton(btn) {
     if (!btn) return "";
-    const cls = isPrimary ? "mod-btn" : "mod-btn mod-btn-ghost";
+
+    const variantClass = `mod-btn-${btn.variant || "primary"}`;
+    const cls = `mod-btn ${variantClass}`;
 
     if (btn.disabled) {
         const reason = btn.reason ? `title="${btn.reason}" data-reason="${btn.reason}"` : "";
         return `<a class="${cls} is-disabled" aria-disabled="true" tabindex="-1" ${reason}>
-            <i class="${btn.icon}"></i> ${btn.label}
+            <i class="${btn.icon}"></i> <span>${btn.label}</span>
         </a>`;
-    }
-
-    // Detay butonu ise modal aç
-    if (btn.action === "detail") {
-        return `<button type="button" class="${cls}" data-detail="${modId}">
-            <i class="${btn.icon}"></i> ${btn.label}
-        </button>`;
     }
 
     const target = btn.url && btn.url !== "#" ? 'target="_blank" rel="noopener"' : "";
     return `<a href="${btn.url || '#'}" class="${cls}" ${target}>
-        <i class="${btn.icon}"></i> ${btn.label}
+        <i class="${btn.icon}"></i> <span>${btn.label}</span>
     </a>`;
 }
 
 function renderActions(mod) {
-    const primary = renderButton(mod.buttons?.primary, true, mod.id);
-    const secondary = renderButton(mod.buttons?.secondary, false, mod.id);
+    const buttons = mod.buttons || [];
 
-    // Detay butonu her zaman ek olarak gelsin
-    const detailBtn = mod.details
-        ? `<button type="button" class="mod-btn mod-btn-ghost" data-detail="${mod.id}">
-             <i class="fa-solid fa-circle-info"></i> Detay
+    // Detay butonu her zaman en sonda otomatik eklensin
+    const detailBtnHtml = mod.details
+        ? `<button type="button" class="mod-btn mod-btn-detail" data-detail="${mod.id}">
+             <i class="fa-solid fa-circle-info"></i> <span>Detay</span>
            </button>`
         : "";
 
-    return `<div class="card-actions">${primary}${secondary || detailBtn}</div>
-            ${secondary && detailBtn ? `<div class="card-actions card-actions-second">${detailBtn}</div>` : ""}`;
+    const buttonsHtml = buttons.map(renderSingleButton).join("");
+
+    return `<div class="card-actions">${buttonsHtml}${detailBtnHtml}</div>`;
 }
 
 function renderCard(mod) {
@@ -288,7 +301,6 @@ function createModal() {
     `;
     document.body.appendChild(modal);
 
-    // Kapatma olayları
     modal.querySelector(".modal-close").addEventListener("click", closeModal);
     modal.querySelector(".modal-backdrop").addEventListener("click", closeModal);
     document.addEventListener("keydown", (e) => {
@@ -304,7 +316,6 @@ function openModal(modId) {
     modal.querySelector("#modalTitle").innerHTML = mod.details.title;
     modal.querySelector("#modalBody").innerHTML = mod.details.body.replace(/\n/g, "<br>");
 
-    // Aksan rengini karta göre ayarla
     const accents = {
         released: { rgb: "0, 255, 157", color: "#00ff9d" },
         dev: { rgb: "255, 170, 0", color: "#ffaa00" },
@@ -337,7 +348,6 @@ function setupFilters() {
     const cards = document.querySelectorAll(".fnf-card[data-status]");
     const noResults = document.getElementById("noResults");
 
-    // Sayaçları güncelle
     filterButtons.forEach(btn => {
         const f = btn.dataset.filter;
         const total = f === "all"
@@ -374,7 +384,6 @@ function initFNF() {
     const grid = document.getElementById("modGrid");
     if (!grid) return;
 
-    // Kartları render et
     const cardsHtml = MODS.map(renderCard).join("");
     grid.innerHTML = cardsHtml + `
         <div class="no-results" id="noResults">
@@ -383,10 +392,8 @@ function initFNF() {
         </div>
     `;
 
-    // Modal oluştur
     createModal();
 
-    // Detay butonlarına event bağla
     document.addEventListener("click", (e) => {
         const btn = e.target.closest("[data-detail]");
         if (btn) {
@@ -395,10 +402,8 @@ function initFNF() {
         }
     });
 
-    // Filtre sistemi
     setupFilters();
 
-    // Devre dışı butonlar için tooltip (basit bir bildirim)
     document.querySelectorAll(".mod-btn.is-disabled").forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -422,14 +427,13 @@ function showToast(message) {
     }
     toast.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${message}`;
     toast.classList.remove("show");
-    void toast.offsetWidth; // reflow
+    void toast.offsetWidth;
     toast.classList.add("show");
 
     clearTimeout(toast._timer);
     toast._timer = setTimeout(() => toast.classList.remove("show"), 3000);
 }
 
-// Sayfa hazır olunca çalıştır
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initFNF);
 } else {
