@@ -48,7 +48,9 @@
     const tags = document.createElement("div");
     tags.className = "tags";
 
-    tags.append(createTag(deleted ? "SİLİNDİ" : "AKTİF", deleted));
+    tags.append(
+      createTag(deleted ? "SİLİNDİ" : "AKTİF", deleted)
+    );
 
     for (const tag of Array.isArray(bot.tags) ? bot.tags : []) {
       tags.append(createTag(tag));
@@ -130,9 +132,9 @@
           detail: {
             category: "bots",
             total: validBots.length,
-            active: validBots.filter((bot) => bot.status === "active").length,
-          },
-        }),
+            active: validBots.filter((bot) => bot.status === "active").length
+          }
+        })
       );
     } catch (error) {
       console.error("[BOT.js] Bot verileri yüklenemedi:", error);
@@ -145,21 +147,6 @@
       grid.replaceChildren(message);
     }
   }
-
-  mobileMenuButton.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
-
-    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
-
-    mobileMenuButton.setAttribute(
-      "aria-label",
-      isOpen ? "Menüyü kapat" : "Menüyü aç",
-    );
-
-    mobileMenuButton.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
-      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
-  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init, { once: true });

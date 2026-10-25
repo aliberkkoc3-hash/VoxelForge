@@ -951,11 +951,6 @@ footer::before {
     outline-offset: 4px;
 }
 
-.mobile-menu-button:hover {
-  border-color: var(--border-hover);
-}
-
-
 .bot-links {
     display: flex;
     flex-wrap: wrap;

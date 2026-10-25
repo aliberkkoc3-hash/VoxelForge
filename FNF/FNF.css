@@ -114,10 +114,6 @@ body::before {
     z-index: 1000;
 }
 
-.mobile-menu-button:hover {
-  border-color: var(--border-hover);
-}
-
 
 .logo {
     font-family: var(--font-pixel);
