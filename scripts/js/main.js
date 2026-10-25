@@ -21,6 +21,21 @@ if (canvas) {
         mouse.y = event.y;
     });
 
+    mobileMenuButton.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+    mobileMenuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Menüyü kapat" : "Menüyü aç",
+    );
+
+    mobileMenuButton.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+  });
+
     class Particle {
         constructor(x, y, directionX, directionY, size, color) {
             this.x = x;

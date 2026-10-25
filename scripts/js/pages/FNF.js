@@ -9,7 +9,7 @@ import {
   createModal,
   openModal,
   initModalKeyboard,
-  setModalMods
+  setModalMods,
 } from "../core/modal.js";
 
 import { showToast } from "../core/toast.js";
@@ -23,9 +23,7 @@ async function loadMods() {
   const response = await fetch(MODS_JSON_PATH);
 
   if (!response.ok) {
-    throw new Error(
-      `Mod verileri yüklenemedi. HTTP ${response.status}`
-    );
+    throw new Error(`Mod verileri yüklenemedi. HTTP ${response.status}`);
   }
 
   const data = await response.json();
@@ -36,7 +34,7 @@ async function loadMods() {
 
   return {
     mods: data.mods,
-    statusLabels: data.statusLabels ?? {}
+    statusLabels: data.statusLabels ?? {},
   };
 }
 
@@ -44,15 +42,11 @@ async function loadMods() {
  * Kategori filtrelerini kurar.
  */
 function setupFilters(grid) {
-  const filterButtons = [
-    ...document.querySelectorAll(".filter-btn")
-  ];
+  const filterButtons = [...document.querySelectorAll(".filter-btn")];
 
   const noResults = document.getElementById("noResults");
 
-  const cards = [
-    ...grid.querySelectorAll(".fnf-card[data-status]")
-  ];
+  const cards = [...grid.querySelectorAll(".fnf-card[data-status]")];
 
   // Her kategorideki mod sayısını hesapla.
   filterButtons.forEach((button) => {
@@ -61,9 +55,7 @@ function setupFilters(grid) {
     const count =
       filter === "all"
         ? cards.length
-        : cards.filter(
-            (card) => card.dataset.status === filter
-          ).length;
+        : cards.filter((card) => card.dataset.status === filter).length;
 
     const countElement = button.querySelector(".count");
 
@@ -87,9 +79,7 @@ function setupFilters(grid) {
       let visible = 0;
 
       cards.forEach((card) => {
-        const show =
-          filter === "all" ||
-          card.dataset.status === filter;
+        const show = filter === "all" || card.dataset.status === filter;
 
         card.classList.toggle("hidden", !show);
 
@@ -99,10 +89,7 @@ function setupFilters(grid) {
       });
 
       if (noResults) {
-        noResults.classList.toggle(
-          "show",
-          visible === 0
-        );
+        noResults.classList.toggle("show", visible === 0);
       }
     });
   });
@@ -131,16 +118,13 @@ function setupCardActions(grid) {
     }
 
     // Henüz kullanılamayan butonlar.
-    const disabledButton = target.closest(
-      ".mod-btn.is-disabled"
-    );
+    const disabledButton = target.closest(".mod-btn.is-disabled");
 
     if (disabledButton && grid.contains(disabledButton)) {
       event.preventDefault();
 
       showToast(
-        disabledButton.dataset.reason ||
-        "Bu özellik henüz kullanılamıyor."
+        disabledButton.dataset.reason || "Bu özellik henüz kullanılamıyor.",
       );
     }
   });
@@ -167,9 +151,7 @@ export async function initFNF() {
 
     // Mod kartlarını oluştur.
     grid.innerHTML =
-      mods
-        .map((mod) => renderCard(mod, statusLabels))
-        .join("") +
+      mods.map((mod) => renderCard(mod, statusLabels)).join("") +
       `
         <div class="no-results" id="noResults">
           <i
@@ -187,12 +169,8 @@ export async function initFNF() {
 
     setupCardActions(grid);
     setupFilters(grid);
-
   } catch (error) {
-    console.error(
-      "VoxelForge FNF modları yüklenemedi:",
-      error
-    );
+    console.error("VoxelForge FNF modları yüklenemedi:", error);
 
     grid.innerHTML = `
       <div class="no-results show">
@@ -210,21 +188,31 @@ export async function initFNF() {
 
     // Hata sonrası tekrar başlatılabilmesine izin ver.
     grid.dataset.initialized = "false";
-
   } finally {
     grid.setAttribute("aria-busy", "false");
   }
 }
 
+mobileMenuButton.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+  mobileMenuButton.setAttribute(
+    "aria-label",
+    isOpen ? "Menüyü kapat" : "Menüyü aç",
+  );
+
+  mobileMenuButton.innerHTML = isOpen
+    ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+    : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+});
+
 /**
  * Sayfa yüklendiğinde başlat.
  */
 if (document.readyState === "loading") {
-  document.addEventListener(
-    "DOMContentLoaded",
-    initFNF,
-    { once: true }
-  );
+  document.addEventListener("DOMContentLoaded", initFNF, { once: true });
 } else {
   initFNF();
 }

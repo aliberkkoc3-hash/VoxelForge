@@ -764,6 +764,10 @@ footer::before {
     font-size: 0.88rem;
   }
 
+  .mobile-menu-button:hover {
+    border-color: var(--border-hover);
+  }
+
   .page-header {
     padding-top: 140px;
   }

@@ -115,9 +115,10 @@
           detail: {
             category: "sites",
             total: validSites.length,
-            active: validSites.filter((site) => site.status === "active").length
-          }
-        })
+            active: validSites.filter((site) => site.status === "active")
+              .length,
+          },
+        }),
       );
     } catch (error) {
       console.error("[SITES.js] Site verileri yüklenemedi:", error);
@@ -130,6 +131,21 @@
       grid.replaceChildren(message);
     }
   }
+
+  mobileMenuButton.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+    mobileMenuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Menüyü kapat" : "Menüyü aç",
+    );
+
+    mobileMenuButton.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init, { once: true });
