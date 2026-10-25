@@ -1,0 +1,59 @@
+[
+  {
+    "id": "voxel-forge",
+    "name": "Voxel Forge",
+    "description": "Minecraft modlarını, botları, oyun projelerini ve yazılım çalışmalarını bir araya getiren kişisel fütüristik portfolyo.",
+    "status": "active",
+    "tags": ["HTML", "CSS", "JS", "RENDER", "PORTFOLIO"],
+    "links": [
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aliberkkoc3-hash/VoxelForge",
+        "icon": "fa-brands fa-github"
+      },
+      {
+        "label": "Canlı Site",
+        "url": "https://voxelforge-ewiw.onrender.com",
+        "icon": "fa-solid fa-globe"
+      }
+    ]
+  },
+  {
+    "id": "the-brave-jump",
+    "name": "The Brave Jump",
+    "description": "Brave uygulamasında geliştirilen ilk oyun projesi.",
+    "status": "active",
+    "tags": ["HTML", "CSS", "JS", "RENDER", "GAME"],
+    "links": [
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aliberkkoc3-hash/TheBraveJump",
+        "icon": "fa-brands fa-github"
+      },
+      {
+        "label": "Canlı Site",
+        "url": "https://thebravejump.onrender.com",
+        "icon": "fa-solid fa-globe"
+      }
+    ]
+  },
+  {
+    "id": "pixelpulse",
+    "name": "PixelPulse",
+    "description": "Pixel Devs projelerinin çalışma sürelerini, ping değerlerini ve sistem durumlarını takip eden status arayüzü.",
+    "status": "active",
+    "tags": ["HTML", "CSS", "JS", "RENDER", "UPTIMEROBOT API"],
+    "links": [
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aliberkkoc3-hash/PixelPulse",
+        "icon": "fa-brands fa-github"
+      },
+      {
+        "label": "Canlı Site",
+        "url": "https://pixelpulse-xdjk.onrender.com",
+        "icon": "fa-solid fa-globe"
+      }
+    ]
+  }
+]

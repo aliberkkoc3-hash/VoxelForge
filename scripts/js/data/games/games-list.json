@@ -1,0 +1,23 @@
+[
+    {
+        "id": "zenith",
+        "name": "ZENITH",
+        "description": "Noise tabanlı haritalarda hayatta kalmaya ve en yüksek skoru elde etmeye çalıştığın, algoritmik olarak üretilen bir platform macerası. Java ve Gradle ile geliştiriliyor. Projenin şu an indirilebilir bir EXE dosyası bulunmadığından GitHub sürümü yayımlanmadı.",
+        "status": "semi-active",
+        "tags": [
+            "JAVA",
+            "GRADLE",
+            "HAYATTA KALMA",
+            "PROSEDÜREL OLUŞUM",
+            "EXE DOSYASI YOK"
+        ],
+        "links": [
+            {
+                "label": "EXE DOSYASI YOK",
+                "url": null,
+                "icon": "fa-solid fa-triangle-exclamation",
+                "type": "notice"
+            }
+        ]
+    }
+]

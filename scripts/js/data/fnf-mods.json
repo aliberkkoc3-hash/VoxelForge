@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "description": "VoxelForge FNF sayfasındaki bütün modların kart, filtre, buton ve detay verileri.",
+  "statusLabels": {
+    "released": "Yayınlandı",
+    "dev": "Geliştiriliyor",
+    "halted": "Durduruldu",
+    "soon": "Yakında"
+  },
+  "mods": [
+    {
+      "id": "prism-engine",
+      "name": "Prism Engine",
+      "icon": "fa-solid fa-gem",
+      "status": "dev",
+      "version": "Açık Beta",
+      "tagline": "Saf Haxe ile sıfırdan yazılmış özel bir FNF Engine'ı. Psych'a benzer yapıda ama tamamen bağımsız bir kod tabanına sahip.",
+      "progress": 35,
+      "meta": [
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Saf Haxe"
+        },
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Port"
+        },
+        {
+          "icon": "fa-solid fa-list-check",
+          "text": "Görev Sistemi"
+        },
+        {
+          "icon": "fa-solid fa-shop",
+          "text": "Market Sistemi"
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-list-check",
+          "title": "Görev Sistemi",
+          "desc": "Oyun içi görevler tamamla, ödüller kazan"
+        },
+        {
+          "icon": "fa-solid fa-shop",
+          "title": "Market Sistemi",
+          "desc": "Şarkılar, skinler ve içerikler satın al"
+        },
+        {
+          "icon": "fa-solid fa-music",
+          "title": "Yeni Şarkılar",
+          "desc": "Özel besteler ve yeni ritimler"
+        },
+        {
+          "icon": "fa-solid fa-wand-magic-sparkles",
+          "title": "Özel Geçişler",
+          "desc": "Kendine has sahne geçiş efektleri"
+        }
+      ],
+      "note": "Psych Engine'a benzer yapıda ama tamamen bağımsız bir engine'dır.",
+      "tags": [
+        "Custom Engine",
+        "Görev Sistemi",
+        "Market",
+        "Açık Beta"
+      ],
+      "buttons": [
+        {
+          "label": "Açık Beta Henüz Çıkmadı",
+          "icon": "fa-solid fa-hourglass-half",
+          "variant": "primary",
+          "disabled": true,
+          "reason": "Açık Beta Daha Çıkmadı"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "#",
+          "variant": "github",
+          "disabled": true,
+          "reason": "Repo Henüz Yayında Değil"
+        }
+      ],
+      "details": {
+        "title": "🔷 Prism Engine - Açık Beta Öncesi",
+        "body": "Prism Engine, tamamen sıfırdan <strong>Haxe</strong> ile yazılmakta olan bağımsız bir Friday Night Funkin' motorudur.\n\n<h4>💎 Neler Var?</h4>\n• <strong>Görev Sistemi:</strong> Oyun içi görevleri tamamla, XP ve ödül kazan.\n• <strong>Market Sistemi:</strong> Kazandığın coinlerle yeni şarkılar, karakter skinleri ve özel içerikler satın al.\n• <strong>Yeni Şarkılar:</strong> Özel besteler ve tamamen yeni ritim yapıları.\n• <strong>Değişik Geçiş Animasyonları:</strong> Kendine has sahne geçiş efektleri.\n\n<h4>⚠️ Not</h4>\nPrism Engine yapı olarak Psych Engine'a benzese de kod tabanı ve mimarisi tamamen bağımsızdır. Sıfırdan geliştirilmiştir.\n\n<h4>🚧 Durum</h4>\nŞu anda %35 tamamlanmış durumda. Açık Beta henüz yayınlanmadı, takipte kalın!"
+      }
+    },
+    {
+      "id": "rhythmx",
+      "name": "RhythmX",
+      "icon": "fa-solid fa-bolt",
+      "status": "released",
+      "version": "v0.0.3",
+      "tagline": "Cyberpunk estetiği, otomatik dodge/click sistemleri ve VSCHARA 2.0 desteğiyle donatılmış özel FNF modu.",
+      "meta": [
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Lua"
+        },
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Port"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "P-SLICE"
+        },
+        {
+          "icon": "fa-solid fa-robot",
+          "text": "Auto Dodge"
+        },
+        {
+          "icon": "fa-solid fa-hand-pointer",
+          "text": "Auto Click"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "VSCHARA 2.0"
+        }
+      ],
+      "events": [
+        "BFPlaysSansTheme.lua",
+        "FlashBang.lua",
+        "ReplayGChart.lua",
+        "SaveGChart.lua",
+        "Spare.lua",
+        "WelcomeHell.lua"
+      ],
+      "tags": [
+        "Psych Engine(P-SLICE)",
+        "BotPlay",
+        "VSCHARA 2.0"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/e9fcx67b9eoey7r/RhythmX-0.0.3.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/RhythmX/releases/tag/0.0.3",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/RhythmX",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "⚡ RhythmX v0.0.3 - Parmaklara Jimnastik, Ritmik Kaos! 🎤",
+        "body": "RhythmX, öyle alelade bir Friday Night Funkin' modu değil; bildiğin parmaklarını düğüm yapacak, <strong>VSCHARA(2.0)</strong> moduyla kanka gibi takılan, yerinde duramayan bir canavar. \"Bilgisayarım patates, FNF oynarken uçak motoru gibi ses çıkarıyor\" diyenleri de düşündük; altyapısı o kadar hafif ki tost makinesinde bile su kaynatmadan çalışır.\n\n<h4>🚀 Neler Var Bu Canavarın İçinde?</h4>\n• <strong>Psych Engine v1.0.4 Uyumluluğu:</strong> Yağ gibi akan performans, en güncel altyapı. Donma, kasma, Windows'un \"yanıt vermiyor\" tribi burada yok!\n• <strong>Chara 2.0 Entegrasyonu:</strong> VSCHARA(2.0) ile tam uyumlu; yani eğlenceyi ikiye katlıyoruz, aksiyonu arşa çıkarıyoruz.\n• <strong>Özel Tuş Kombinasyonları:</strong> Shift, CTRL, TAB ve o meşhur ritim dizileri için özel optimize edildi. Parmaklarınız piyano çalıyor gibi hissedecek.\n• <strong>RhythmXAutoPress Desteği:</strong> M tuşuyla dodge (kaçınma) olayını baştan yazdık. Artık \"bastım ama yemedi\" bahaneniz kalmadı; hata payı silindi, ritim akıp gidiyor.\n• <strong>Hafif ve Hızlı:</strong> Altyapı o kadar optimize ki, sistemini yormaz, sadece müziğe odaklanmanı sağlar.\n\n<h4>📦 Kurulum (İndir, Daldır, Oyna)</h4>\n1. En güncel sürümü (v0.0.3) MediaFire veya GitHub Releases sayfasından hemen kap gel.\n2. İndirdiğin .zip dosyasının içindeki her şeyi <strong>Psych Engine v1.0.4</strong> klasörünün içine bodoslama boşalt.\n3. Oyunu aç, hoparlörün sesini kökle ve ritmin dibine vur! 🎸\n\n<h4>🔗 İndirme Kaynakları</h4>\n• <strong>MediaFire:</strong> Hızlı ve direkt indirme\n• <strong>GitHub Release:</strong> Değişiklik günlüğü ile birlikte\n• <strong>Kaynak Kod:</strong> Modu incelemek veya katkı sağlamak için\n\n<em>FNF tayfası için bolca kahve ve uykusuz geceyle, tutkuyla hazırlandı.</em>"
+      }
+    },
+    {
+      "id": "funklab-mobile",
+      "name": "FunkLab Mobile Port",
+      "icon": "fa-solid fa-mobile-screen-button",
+      "status": "released",
+      "version": "v0.1.4",
+      "tagline": "Yatakta, yolda, okulda - parmağını bile oynatmadan ritmin kralı ol. Bot terliyor, sen şöhretin tadını çıkarıyorsun! 📱🤖🔥",
+      "meta": [
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Saf Haxe"
+        },
+        {
+          "icon": "fa-solid fa-mobile-screen",
+          "text": "Mobile Port"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-SLICE"
+        },
+        {
+          "icon": "fa-solid fa-robot",
+          "text": "Bot Play"
+        },
+        {
+          "icon": "fa-solid fa-wifi",
+          "text": "Offline"
+        }
+      ],
+      "tags": [
+        "V-Slice 0.8.8",
+        "FunkLab",
+        "Touch Controls",
+        "Funk-O Matic 9000"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/x26lwxr3aamv7jj/FunkLab-Mobile-Port-0.1.4.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/FunkLab-Mobile-Port/releases/tag/v0.1.4",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/FunkLab-Mobile-Port",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "📱 v0.1.4 - Funk-O-Matic 9000: Mobil Sistemsel Hakimiyet",
+        "body": "Başparmaklar emekli edildi, işlemciler kırbaçlandı! FunkLab artık cebinizdeki en sinsi güç olan <strong>Funk-O-Matic 9000</strong> tarafından yönetiliyor.\n\n<h4>🚀 Mobil Operasyon Detayları</h4>\n• <strong>Mobil Çekirdek:</strong> Bot mantığı ve ritim senkronizasyonu mobil işlemciler için stabilize edildi.\n• <strong>Funk-O-Turbo Ultra:</strong> Mobil cihazlara özel agresif turboTick protokolü eklendi. RAM tasfiyesi ve GPU rahatlatma modları devreye alındı.\n• <strong>Mutlak Hassasiyet:</strong> Botun vuruş kalitesini sen belirle! İster kusursuz \"SICK\" vur, ister +/- 55ms sapmayla \"Pro Player\" taklidi yap.\n• <strong>Hayalet Skor (Ghost Mode) v2:</strong> Uzun notaların (sustain) puan sızıntıları tamamen tıkandı. Bot notaları tokatlar ama skor tabelasında tek bir dijital iz bile bırakmaz.\n• <strong>Güvenlik & Kararlılık:</strong> InfoHUD, sistem güvenliği ve çökme risklerini sıfırlamak adına tasfiye edildi. Protokol-66 artık daha sessiz ve daha ölümcül.\n\n<h4>🔗 İndirme Kaynakları</h4>\n• <strong>MediaFire APK:</strong> Direkt APK indirme (hızlı)\n• <strong>GitHub Release:</strong> Sürüm notları ve arşiv\n• <strong>Kaynak Kod:</strong> Projeyi keşfet, katkı sağla\n\n<h4>⚠️ Not</h4>\nBu sürümden sonra telefonunuzun ısınması bir hata değil, botun notaları parçalarken çıkardığı <em>sürtünme ısısıdır</em>.\n\n<h4>🎮 Sunan</h4>\n<strong>Prism Crew AltYapıyı Ele Aldı & BF_AliBerk_BF</strong> sundu: Parmaklara özgürlük, işlemciye zulüm!"
+      }
+    },
+    {
+      "id": "funklab",
+      "name": "FunkLab",
+      "icon": "fa-solid fa-robot",
+      "status": "released",
+      "version": "v0.1.3",
+      "tagline": "PC başında, klavyenin başında - parmağını bile oynatmadan ritmin kralı ol. Bot terliyor, sen şöhretin tadını çıkarıyorsun! 🖥️🤖",
+      "meta": [
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Saf HaxeC"
+        },
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Port"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-SLICE"
+        },
+        {
+          "icon": "fa-solid fa-robot",
+          "text": "Bot Play"
+        },
+        {
+          "icon": "fa-solid fa-wifi",
+          "text": "Offline"
+        }
+      ],
+      "tags": [
+        "FunkLab",
+        "V-Slice 0.8.6",
+        "Protokol-66"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/sati4ddwyto7q3v/FunkLab-0.1.3.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/FunkLab/releases/tag/v0.1.3",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/FunkLab",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "🖥️ v0.1.4 - Funk-O-Matic 9000: PC Sistemsel Hakimiyet",
+        "body": "Başparmaklar emekli edildi, işlemciler göreve çağrıldı! FunkLab artık PC başındaki en sinsi güç olan <strong>Funk-O-Matic 9000</strong> tarafından yönetiliyor.\n\n<h4>🚀 PC Operasyon Detayları</h4>\n• <strong>Masaüstü Çekirdeği:</strong> Bot mantığı ve ritim senkronizasyonu PC ortamı için optimize edildi.\n• <strong>Funk-O-Turbo Ultra:</strong> Masaüstüne özel turboTick protokolü devrede. İşlemci kullanımını ve performans dengesini gözeten optimizasyonlar uygulandı.\n• <strong>Mutlak Hassasiyet:</strong> Botun vuruş kalitesini sen belirle! İster kusursuz <strong>SICK</strong> vur, ister ±55 ms sapmayla <strong>Pro Player</strong> performansını taklit et.\n• <strong>Hayalet Skor (Ghost Mode) v2:</strong> Uzun notaların (sustain) puan sorunları giderildi. Bot notaları oynarken skor tabelasında dijital iz bırakmama özelliği korunur.\n• <strong>Güvenlik & Kararlılık:</strong> InfoHUD, sistem güvenliği ve kararlılık hedefleri doğrultusunda kaldırıldı. Protokol-66 artık daha sessiz ve daha kararlı.\n\n<h4>🔗 İndirme Kaynakları</h4>\n• <strong>MediaFire:</strong> PC sürümünü doğrudan indir.\n• <strong>GitHub Release:</strong> Sürüm notları ve arşiv.\n• <strong>Kaynak Kod:</strong> Projeyi keşfet, katkı sağla.\n\n<h4>⚠️ Not</h4>\nBu sürümde yüksek işlemci kullanımı görürsen performans ayarlarını kontrol et. Botun ritmi yakalaması, bilgisayarını alev makinesine dönüştürmesi gerektiği anlamına gelmez. 🔥\n\n<h4>🎮 Sunan</h4>\n<strong>Prism Crew AltYapıyı Ele Aldı & BF_AliBerk_BF</strong> sundu: Parmaklara özgürlük, klavyeye emeklilik!"
+      }
+    },
+    {
+      "id": "midslice",
+      "name": "MidSlice",
+      "icon": "fa-solid fa-table-columns",
+      "status": "released",
+      "version": "v0.0.2",
+      "tagline": "Rakibini gizle. Ritmi ele geçir.",
+      "meta": [
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Saf HaxeC"
+        },
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Port"
+        },
+        {
+          "icon": "fa-solid fa-table-columns",
+          "text": "Orta Kaydırma"
+        },
+        {
+          "icon": "fa-solid fa-eye-slash",
+          "text": "Rakip Notları Gizli"
+        },
+        {
+          "icon": "fa-solid fa-sliders",
+          "text": "Özelleştirilebilir"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-SLICE"
+        }
+      ],
+      "info": "MidSlice modunda yinelenen sınıf tanımlamaları tespit edildi. Aynı isimli scriptleri birden fazla kez yüklemediğinden emin ol.",
+      "tags": [
+        "FnF",
+        "V-Slice 0.8.6",
+        "MiddleScroll",
+        "Opponent Notes",
+        "Customizable",
+        "Modular"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/5d748laj0a8d3of/MidSlice.0.0.2.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/MidSlice/releases/tag/0.0.2",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/MidSlice",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "🎵 MidSlice v0.0.1 — Rakibini Gizle, Ritmi Ele Geçir!",
+        "body": "<h4>🎵 Rakibini Gizle. Ritmi Ele Geçir.</h4>\n<p><strong>MidSlice</strong>, Friday Night Funkin' V-Slice için geliştirilmiş, rakibin nota şeridini gizleyerek görsel karmaşayı azaltmayı ve kendi notalarına odaklanmanı sağlayan modüler bir projedir! 🎯</p>\n<p>Oynanış ekranını sadeleştir, dikkatini kendi nota şeridine ver ve ritmin kontrolünü eline al. 🔥🎶</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>👁️ Opponent Strumline Gizleme:</strong> Rakibin nota şeridini gizleyerek ekrandaki görsel yoğunluğu azaltır.</li>\n<li><strong>🎮 Oyuncu Odaklı Oynanış:</strong> Kendi notalarına ve nota zamanlamalarına odaklanmana yardımcı olur.</li>\n<li><strong>⚙️ MidSliceSettings:</strong> M tuşuyla ayar panelini aç ve desteklenen seçenekleri düzenle.</li>\n<li><strong>📋 CreditsPanel:</strong> C tuşuyla geliştirici bilgileri panelini aç, ESC tuşuyla paneli kapat.</li>\n<li><strong>🧩 Modüler HaxeC Yapısı:</strong> Farklı işlevleri ayrı modüller hâlinde düzenleyen organize bir kod yapısı sunar.</li>\n<li><strong>🎨 Sade Oynanış Görünümü:</strong> Yeni şarkılar veya karakterler eklemek yerine mevcut oynanış arayüzünü sadeleştirmeye odaklanır.</li>\n</ul>\n<h4>🎮 Nasıl Kullanılır?</h4>\n<ul>\n<li><strong>⌨️ M:</strong> MidSliceSettings ayar panelini aç.</li>\n<li><strong>📋 C:</strong> CreditsPanel'i açarak geliştirici bilgilerini görüntüle.</li>\n<li><strong>❎ ESC:</strong> CreditsPanel'i kapat.</li>\n</ul>\n<h4>🛠️ Modüler Tasarım</h4>\n<p>MidSlice, işlevlerini ayrı modüller üzerinden düzenleyen HaxeC tabanlı bir projedir. Ana modül rakibin nota şeridini gizleme işlevine odaklanırken <strong>MidSliceSettings</strong> ayar seçeneklerini, <strong>CreditsPanel</strong> ise geliştirici bilgilerini yönetir. 🧩</p>\n<h4>🎵 Neden MidSlice?</h4>\n<p>Bazen daha fazlasına değil, daha sade bir ekrana ihtiyacın vardır! 💥 MidSlice, rakibin nota şeridini gizleyerek kendi oynanış alanını ön plana çıkarmayı amaçlar. Böylece dikkatini kendi notalarına ve müziğin ritmine verebilirsin. 🎧</p>\n<h4>💜 Geliştirici</h4>\n<p><strong>Prism Crew Studio</strong> tarafından geliştirilen MidSlice, Friday Night Funkin' V-Slice için hazırlanmış modüler ve kod odaklı bir projedir.</p>\n<p>🔥 <em>Rakibini gizle, kendi ritmini yakala!</em></p>\n<p><strong>🎵 MidSlice — Rakibini Gizle. Ritmi Ele Geçir.</strong></p>"
+      }
+    },
+    {
+      "id": "bfalitimebar",
+      "name": "BFAliTimeBar",
+      "icon": "fa-solid fa-clock",
+      "status": "released",
+      "version": "v1.0.0",
+      "tagline": "Zamanı Gör, Ritmi Yakala!",
+      "meta": [
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Port"
+        },
+        {
+          "icon": "fa-solid fa-clock",
+          "text": "Zaman Çubuğu"
+        },
+        {
+          "icon":"fa-solid fa-gamepad",
+          "text": "V-SLICE"
+        },
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Support v0.8.6"
+        },
+        {
+          "icon": "fa-solid fa-mobile-screen",
+          "text": "Mobile Support v0.8.8"
+        },
+        {
+          "icon": "fa-solid fa-music",
+          "text": "FnF"
+        },
+        {
+          "icon": "fa-solid fa-palette",
+          "text": "Özel Arayüz (HUD)"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Saf HaxeC"
+        }
+      ],
+      "tags": [
+        "FnF",
+        "HaxeC",
+        "Song Progress",
+        "Custom HUD",
+        "UI Customization",
+        "Gameplay",
+        "Modular"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/8145f0sc5s39gil/BFAliTimeBar.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/BFAliTimeBar/releases/tag/1.0.0",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/BFAliTimeBar",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "⏱️ BFAliTimeBar v1.0.0 — Zamanı Gör, Ritmi Yakala!",
+        "body": "<h4>⏱️ Şarkının Süresi, Ritmin Akışı!</h4>\n<p>🎵 Friday Night Funkin' V-Slice için geliştirilen <strong>BFAliTimeBar</strong>, oyun deneyimine özel bir zaman çubuğu ekleyerek şarkının ilerleyişini takip etmene yardımcı olur! Kırmızı, koyu kırmızı, mavi ve koyu mavi tonlarını bir araya getiren tasarımıyla oynanış arayüzüne kendine özgü bir görünüm kazandırır. 💙❤️</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>⏱️ Şarkı Zaman Çubuğu:</strong> Oynanış sırasında şarkının ilerleyişini takip edebilmen için özel bir zaman göstergesi sunar.</li>\n<li><strong>🎨 Özel Renk Tasarımı:</strong> Kırmızı, koyu kırmızı, mavi ve koyu mavi tonlarını bir araya getirerek FNF arayüzüne farklı bir görünüm kazandırır.</li>\n<li><strong>🖥️ HUD Entegrasyonu:</strong> Zaman çubuğunu oynanış arayüzüne entegre ederek şarkı süresini görsel olarak takip etmeyi kolaylaştırır.</li>\n<li><strong>⚙️ V-Slice Uyumluluğu:</strong> Friday Night Funkin' V-Slice 0.8.6 için geliştirilmiştir.</li>\n<li><strong>💻 HaxeC ile Geliştirildi:</strong> FNF modlama altyapısına yönelik kod tabanlı, bağımsız bir arayüz projesidir.</li>\n<li><strong>🧩 Odaklı Tasarım:</strong> Yeni şarkılar veya karakterler eklemek yerine doğrudan şarkı zaman çubuğuna odaklanır.</li>\n</ul>\n<h4>🎵 Neden BFAliTimeBar?</h4>\n<p>Ritim oyunlarında şarkının ne kadar ilerlediğini görebilmek, oyun deneyiminin önemli bir parçasıdır! <strong>BFAliTimeBar</strong>, bu deneyime kendine özgü bir renk düzeni ve özel bir zaman çubuğu tasarımı eklemeyi amaçlar. Sade işlevini korurken klasik arayüzden farklılaşan bir görünüm sunar. 🎶</p>\n<h4>🎮 Zamanı Gör, Ritmi Yakala!</h4>\n<p>Şarkının başlangıcından son notalarına kadar zaman akışını takip et! ⏳ BFAliTimeBar, özel renk tasarımını FNF oynanış arayüzüyle birleştirerek ritim deneyimine farklı bir dokunuş katar.</p>\n<h4>💜 Geliştirici</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen BFAliTimeBar, Friday Night Funkin' V-Slice topluluğu için hazırlanmış bağımsız bir arayüz modülüdür.</p>\n<p><em>⏱️ Zamanı Gör, Ritmi Yakala!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    },
+    {
+      "id": "bfanim",
+      "name": "BFAnim",
+      "icon": "fa-solid fa-film",
+      "status": "released",
+      "version": "v0.1.1",
+      "tagline": "B'ye Bas, Taunt'u Patlat!",
+      "meta": [
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Support v0.8.6"
+        },
+        {
+          "icon": "fa-solid fa-mobile-screen",
+          "text": "Mobile Support v0.8.8"
+        },
+        {
+          "icon": "fa-solid fa-film",
+          "text": "Taunt Animation"
+        },
+        {
+          "icon": "fa-solid fa-mobile-screen",
+          "text": "Taunt Button"
+        },
+        {
+          "icon": "fa-solid fa-keyboard",
+          "text": "B Key Activation"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "FnF"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "HaxeC"
+        }
+      ],
+      "tags": [
+        "FnF",
+        "V-Slice",
+        "HaxeC",
+        "Taunt Animation",
+        "Character Animation",
+        "Taunt Button",
+        "Gameplay"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/9x5nc0n82dlj7sd/BFAnim.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/BFAnim/releases/tag/0.0.1",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/BFAnim",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "🎬 BFAnimation — Tek Tuşla Taunt Zamanı!",
+        "body": "<h4>🎤 BF'nin Taunt Animasyonu Artık Senin Kontrolünde!</h4>\n<p><strong>BFAnimation</strong>, Friday Night Funkin' V-Slice için geliştirilmiş, Boyfriend karakterinin taunt animasyonunu kolayca tetiklemeni sağlayan küçük ama eğlenceli bir moddur! 💙</p>\n<p>Tek bir tuşla BF'nin taunt animasyonunu oynatabilir, oyun deneyimine biraz daha karakter ve eğlence katabilirsin. ✨</p>\n<h4>🎮 Nasıl Kullanılır?</h4>\n<ul>\n<li><strong>🖥️ PC:</strong> Taunt animasyonunu oynatmak için <strong>B</strong> tuşuna bas.</li>\n<li><strong>📱 Mobil:</strong> Ekrandaki özel <strong>Taunt Button</strong> ile animasyonu tetikle.</li>\n</ul>\n<h4>⚙️ Öne Çıkan Özellikler</h4>\n<ul>\n<li>🎬 Boyfriend için taunt animasyonu desteği.</li>\n<li>⌨️ PC sürümünde B tuşuyla kolay kullanım.</li>\n<li>📱 Mobil sürümde özel Taunt Button desteği.</li>\n<li>🧩 HaxeC ile geliştirilmiş modüler kod yapısı.</li>\n<li>🎵 Friday Night Funkin' V-Slice deneyimine uygun tasarım.</li>\n</ul>\n<h4>🛠️ Sürüm Uyumluluğu</h4>\n<p>🖥️ <strong>PC:</strong> V-Slice 0.8.6</p>\n<p>📱 <strong>Mobil:</strong> V-Slice 0.8.8</p>\n<h4>💜 Geliştirici</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen BFAnimation, basit kontrolleriyle taunt animasyonunu daha erişilebilir hâle getirmeyi amaçlar.</p>\n<p>🚀 <em>Bir tuş, bir taunt, biraz daha fazla karakter!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    },
+    {
+      "id": "bfalighostaura",
+      "name": "BFAliGhostAura",
+      "icon": "fa-solid fa-ghost",
+      "status": "released",
+      "version": "v0.0.2",
+      "tagline": "👻 İzini Bırak, Aura'nı Hisset!",
+      "meta": [
+        {
+          "icon": "fa-solid fa-ghost",
+          "text": "Ghost Trail Effects"
+        },
+        {
+          "icon": "fa-solid fa-bolt",
+          "text": "Cyan Aura"
+        },
+        {
+          "icon": "fa-solid fa-music",
+          "text": "FnF"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "HaxeC"
+        },
+        {
+          "icon": "fa-solid fa-desktop",
+          "text": "PC Support v0.8.6"
+        },
+        {
+          "icon": "fa-solid fa-mobile-screen",
+          "text": "Mobile Support v0.8.8"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-Slice"
+        }
+      ],
+      "warning": "PC ve mobil optimizasyon sorunları nedeniyle <strong>indirilmesi önerilmez.</strong> 💜 Prism Crew Studio",
+      "tags": [
+        "FnF",
+        "HaxeC",
+        "Ghost Aura",
+        "Cyan Effects",
+        "AfterImage Effects",
+        "Character Effects",
+        "Gameplay",
+        "Modding"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/cgistq053h8tuz2/BFAliGhostAura.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/BFAliGhostAura/releases/tag/0.0.2",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/BFAliGhostAura",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "👻 BFAliGhostAura — İzini Bırak, Aura'nı Hisset!",
+        "body": "<h4>👻 Her Notadan Sonra Hayalet İzler!</h4>\n<p><strong>BFAliGhostAura</strong>, Friday Night Funkin' V-Slice için geliştirilen, karakterlerin başarılı nota vuruşları sırasında cyan tonlarında hayalet izleri oluşturan görsel efekt modudur! 💠 Karakter hareketlerine geçici bir iz efekti ekleyerek oynanışa daha dinamik ve atmosferik bir görünüm kazandırır.</p>\n<p>Parlak cyan efektleri ve karakterlerin hareketlerini takip eden hayalet izleriyle ritim deneyimine farklı bir görsel dokunuş kat! 🎵✨</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>👻 Hayalet İz Efekti:</strong> Başarılı nota vuruşları sırasında karakterin arkasında geçici hayalet görüntüleri oluşturur.</li>\n<li><strong>💠 Cyan Görsel Tasarım:</strong> Mavi ve cyan tonlarıyla karakter animasyonlarına özgün bir görünüm kazandırır.</li>\n<li><strong>🎵 Nota Vuruşlarına Tepki:</strong> Efektleri başarılı karakter nota vuruşlarıyla ilişkilendirerek oynanışa görsel hareketlilik ekler.</li>\n<li><strong>🖥️ Masaüstü Yapılandırması:</strong> Masaüstü için iz uzunluğu, saydamlık, solma süresi ve ek görsel hareket efektleri gibi ayarlar sunar.</li>\n<li><strong>📱 Mobil Optimizasyon:</strong> Daha kısa izler ve daha hafif efekt ayarlarıyla mobil cihazlarda daha uygun bir kullanım hedefler.</li>\n<li><strong>⚙️ Modüler HaxeC Yapısı:</strong> Efekt ve yapılandırma bileşenlerini ayrı modüller üzerinden düzenler.</li>\n<li><strong>🧩 Ayarlanabilir Efektler:</strong> İz uzunluğu, başlangıç saydamlığı ve solma süresi gibi parametrelerle efekt davranışını yapılandırmaya imkân tanır.</li>\n</ul>\n<h4>🎮 Nasıl Çalışır?</h4>\n<p>BFAliGhostAura, desteklenen karakter nota vuruşları sırasında hayalet iz efektlerini devreye sokar. Oluşturulan izler zamanla saydamlaşarak kaybolur ve karakter hareketlerinin arkasında kısa süreli görsel bir iz bırakır. 👻</p>\n<h4>🖥️ Masaüstü ve Mobil Deneyim</h4>\n<p><strong>🖥️ Masaüstü:</strong> Daha uzun izler, belirgin saydamlık ve ek hareket efektleriyle daha yoğun bir görsel deneyim sunacak şekilde yapılandırılabilir.</p>\n<p><strong>📱 Mobil:</strong> Daha kısa izler ve azaltılmış hareket efektleriyle performansı gözeten bir yapılandırma kullanır.</p>\n<h4>🎨 Neden BFAliGhostAura?</h4>\n<p>Ritim oyunlarında görsel efektler, karakter hareketlerine ayrı bir atmosfer katabilir! <strong>BFAliGhostAura</strong>, yeni karakterler veya şarkılar eklemek yerine mevcut karakter animasyonlarına odaklanır. Cyan hayalet izleriyle başarılı nota vuruşlarını daha dikkat çekici hâle getirmeyi ve oynanışa kendine özgü bir stil kazandırmayı amaçlar. 💙</p>\n<h4>🛠️ Teknik Yapı</h4>\n<p>HaxeC ile geliştirilen proje, masaüstü ve mobil cihazlar için ayrı efekt yapılandırmaları kullanır. Bu yaklaşım, görsel yoğunluğun platforma göre ayarlanmasına ve efekt davranışının daha kontrollü yönetilmesine yardımcı olur. 🧩</p>\n<h4>💜 Geliştirici ve Proje</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen BFAliGhostAura, <strong>Prism Crew Studio</strong> desteğiyle hazırlanan bağımsız bir Friday Night Funkin' mod projesidir.</p>\n<p><em>👻 İzini Bırak, Aura'nı Hisset!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "pxdbot",
+    "name": "PXDBot",
+    "description": "Pixel Devs'in resmi Discord botu. Moderasyon, canlı yayın bildirimleri, FNF mod yükleme, eğlence ve skor tablosu özellikleri sunar.",
+    "status": "active",
+    "tags": ["DISCORD.JS", "NODE.JS", "LINUX", "FNF", "API"],
+    "links": [
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aliberkkoc3-hash/PXDBOT",
+        "icon": "fa-brands fa-github"
+      }
+    ]
+  },
+  {
+    "id": "onyx-ai",
+    "name": "OnyX AI",
+    "description": "Yapay zekâ destekli sohbet asistanıydı. Render altyapısının çökmesi nedeniyle kaldırıldı.",
+    "status": "deleted",
+    "tags": ["PYTHON 3", "WINDOWS", "DISCORD.PY", "ALTYAPI ÇÖKÜŞÜ"],
+    "links": []
+  }
+]

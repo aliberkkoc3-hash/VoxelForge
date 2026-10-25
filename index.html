@@ -1,161 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voxel Forge - Coded Realities</title>
 
     <!-- ==================== FAVICON & İKONLAR ==================== -->
-    <link rel="icon" type="image/png" href="VoxelForge.png">
-    <link rel="shortcut icon" type="image/png" href="VoxelForge.png">
-    <link rel="apple-touch-icon" href="VoxelForge.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="VoxelForge.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="VoxelForge.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="VoxelForge.png">
+    <link rel="icon" type="image/png" href="art/VoxelForge.png" />
+    <link rel="shortcut icon" type="image/png" href="art/VoxelForge.png" />
+    <link rel="apple-touch-icon" href="art/VoxelForge.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="art/VoxelForge.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="art/VoxelForge.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="art/VoxelForge.png" />
 
     <!-- ==================== META / SEO ==================== -->
-    <meta name="description" content="Voxel Forge — Modlar, botlar, oyunlar ve fütüristik sistemler. Kod ile örülmüş bir dijital evrende Ali Berk imzalı yaratımlar.">
-    <meta name="keywords" content="Voxel Forge, FNF, Friday Night Funkin, Modlar, Botlar, Oyunlar, Ali Berk, Pixel Devs">
-    <meta name="author" content="Ali Berk - The Pixel Devs">
-    <meta name="theme-color" content="#00ff9d">
+    <meta
+      name="description"
+      content="Voxel Forge — Modlar, botlar, oyunlar ve fütüristik sistemler. Kod ile örülmüş bir dijital evrende Ali Berk imzalı yaratımlar."
+    />
+    <meta
+      name="keywords"
+      content="Voxel Forge, FNF, Friday Night Funkin, Modlar, Botlar, Oyunlar, Ali Berk, Prism Crew"
+    />
+    <meta name="author" content="Ali Berk - Prism Crew" />
+    <meta name="theme-color" content="#00ff9d" />
 
     <!-- ==================== OPEN GRAPH (Facebook, Discord, WhatsApp) ==================== -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Voxel Forge - Coded Realities">
-    <meta property="og:description" content="Modlar, botlar, oyunlar ve fütüristik sistemler. Ali Berk imzalı dijital evren.">
-    <meta property="og:image" content="VoxelForge.png">
-    <meta property="og:site_name" content="Voxel Forge">
-
-    <!-- ==================== TWITTER CARD ==================== -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Voxel Forge - Coded Realities">
-    <meta name="twitter:description" content="Modlar, botlar, oyunlar ve fütüristik sistemler.">
-    <meta name="twitter:image" content="VoxelForge.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Voxel Forge - Coded Realities" />
+    <meta
+      property="og:description"
+      content="Modlar, botlar, oyunlar ve fütüristik sistemler. Ali Berk imzalı dijital evren."
+    />
+    <meta property="og:image" content="art/VoxelForge.png" />
+    <meta property="og:site_name" content="Voxel Forge" />
 
     <!-- ==================== STYLES & FONTS ==================== -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <canvas id="networkCanvas"></canvas>
 
     <!-- Arka plan katmanları -->
     <div class="scanlines"></div>
-    <div class="vignette"></div>
 
     <nav class="navbar glass">
-        <div class="logo">
-            <img src="VoxelForge.png" alt="Voxel Forge" class="logo-img">
-            VOXEL FORGE
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Ana Sayfa</a></li>
-            <li><a href="FNF.html">FNF</a></li>
-            <li><a href="mods.html">Modlar</a></li>
-            <li><a href="bots.html">Botlar</a></li>
-            <li><a href="games.html">Oyunlar</a></li>
-            <li><a href="sites.html">Siteler</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
+      <div class="logo">
+        <img src="art/VoxelForge.png" alt="Voxel Forge" class="logo-img" />
+        VOXEL FORGE
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+        <li><a href="FNF/FNF.html">FNF</a></li>
+        <li><a href="library/library.html">Kütüphane</a></li>
+        <li><a href="bots/bots.html">Botlar</a></li>
+        <li><a href="games/games.html">Oyunlar</a></li>
+        <li><a href="sites/sites.html">Siteler</a></li>
+        <li><a href="about/about.html">Hakkımda</a></li>
+        <li><a href="contact/contact.html">İletişim</a></li>
+      </ul>
     </nav>
 
     <header class="hero">
-        <!-- Dönen aksan halkaları -->
-        <div class="hero-orb" aria-hidden="true"></div>
+      <!-- Dönen aksan halkaları -->
+      <div class="hero-orb" aria-hidden="true"></div>
 
-        <div class="hero-content">
-            <!-- Sistem başlangıç göstergesi -->
-            <div class="system-status">
-                <span class="dot"></span>
-                <span class="status-text">SYSTEM ONLINE · VOXEL://FORGE_v2.6</span>
-            </div>
-
-            <span class="pixel-badge">
-                <i class="fa-solid fa-terminal"></i>
-                VOXEL FORGE · HOŞGELDİNİZ BİYOYA
-            </span>
-
-            <h1 class="pixel-text" data-text="CODED REALITIES">
-                <span>CODED</span>
-                <span>REALITIES</span>
-            </h1>
-
-            <p class="hero-subtitle">
-                <span class="prompt">&gt;</span> Modlar, botlar, oyunlar ve fütüristik sistemler.
-                <br>Kod ile örülmüş bir dijital evrende <strong>Ali Berk</strong> imzalı yaratımlar.
-            </p>
-
-            <!-- Butonlar -->
-            <div class="hero-btns">
-                <a href="mods.html" class="btn-glow">
-                    <i class="fa-solid fa-rocket"></i>
-                    !İçeriye Dal!
-                </a>
-                <a href="about.html" class="btn-ghost">
-                    <i class="fa-solid fa-user-astronaut"></i>
-                    Hakkımda
-                </a>
-            </div>
-
-            <!-- İstatistikler -->
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-num">7+</div>
-                    <div class="stat-label">Aktif Proje</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <div class="stat-num">3</div>
-                    <div class="stat-label">FNF Modu</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <div class="stat-num">∞</div>
-                    <div class="stat-label">Fikir</div>
-                </div>
-            </div>
-
-            <!-- Hızlı erişim -->
-            <div class="quick-links" aria-label="Hızlı erişim">
-                <a href="FNF.html" class="quick-link" style="--ql-c: #ff3366;">
-                    <i class="fa-solid fa-microphone-lines"></i>
-                    <span>FNF</span>
-                </a>
-                <a href="mods.html" class="quick-link" style="--ql-c: #00ff9d;">
-                    <i class="fa-solid fa-cube"></i>
-                    <span>Mods</span>
-                </a>
-                <a href="bots.html" class="quick-link" style="--ql-c: #5865F2;">
-                    <i class="fa-solid fa-robot"></i>
-                    <span>Bots</span>
-                </a>
-                <a href="games.html" class="quick-link" style="--ql-c: #ffaa00;">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <span>Games</span>
-                </a>
-                <a href="sites.html" class="quick-link" style="--ql-c: #00f0ff;">
-                    <i class="fa-solid fa-globe"></i>
-                    <span>Sites</span>
-                </a>
-                <a href="contact.html" class="quick-link" style="--ql-c: #bd00ff;">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>İletişim</span>
-                </a>
-            </div>
+      <div class="hero-content">
+        <!-- Sistem başlangıç göstergesi -->
+        <div class="system-status">
+          <span class="dot"></span>
+          <span class="status-text">SYSTEM ONLINE · VOXEL://FORGE_v2.7</span>
         </div>
 
-        <!-- Aşağı kaydır ipucu -->
-        <a href="#deep" class="scroll-hint" aria-label="Aşağı kaydır">
-            <span></span>
-        </a>
+        <span class="pixel-badge">
+          <i class="fa-solid fa-terminal"></i>
+          VOXEL FORGE · HOŞGELDİNİZ
+        </span>
+
+        <h1 class="pixel-text" data-text="CODED REALITIES">
+          <span>CODED</span>
+          <span>REALITIES</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          <span class="prompt">&gt;</span> Modlar, botlar, oyunlar ve fütüristik
+          sistemler. <br />Kod ile örülmüş bir dijital evrende
+          <strong>BF_AliBerk_BF</strong> imzalı yaratımlar.
+        </p>
+
+        <!-- Butonlar -->
+        <div class="hero-btns">
+          <a href="library/library.html" class="btn-glow">
+            <i class="fa-solid fa-rocket"></i>
+            !İçeriye Dal!
+          </a>
+          <a href="about/about.html" class="btn-ghost">
+            <i class="fa-solid fa-user-astronaut"></i>
+            Hakkımda
+          </a>
+        </div>
+
+        <!-- İstatistikler -->
+        <div class="hero-stats" id="heroStats">
+          <div class="stat">
+            <div class="stat-num" id="activeProjectsCount">—</div>
+            <div class="stat-label">Aktif Proje</div>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat">
+            <div class="stat-num" id="fnfModsCount">—</div>
+            <div class="stat-label">FNF Modu</div>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat">
+            <div class="stat-num" id="fnfModsDevCount">0</div>
+            <div class="stat-label">Geliştirilen Modlar</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-num" id="ideasCount">∞</div>
+            <div class="stat-label">Fikir</div>
+          </div>
+        </div>
+
+        <!-- Hızlı erişim -->
+        <div class="quick-links" aria-label="Hızlı erişim">
+          <a href="FNF/FNF.html" class="quick-link" style="--ql-c: #ff3366">
+            <i class="fa-solid fa-microphone-lines"></i>
+            <span>FNF</span>
+          </a>
+          <a
+            href="library/library.html"
+            class="quick-link"
+            style="--ql-c: #00ff9d"
+          >
+            <i class="fa-solid fa-cube"></i>
+            <span>Kütüphane</span>
+          </a>
+          <a href="bots/bots.html" class="quick-link" style="--ql-c: #5865f2">
+            <i class="fa-solid fa-robot"></i>
+            <span>Botlar</span>
+          </a>
+          <a href="games/games.html" class="quick-link" style="--ql-c: #ffaa00">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>Oyunlar</span>
+          </a>
+          <a href="sites/sites.html" class="quick-link" style="--ql-c: #00f0ff">
+            <i class="fa-solid fa-globe"></i>
+            <span>Siteler</span>
+          </a>
+          <a
+            href="contact/contact.html"
+            class="quick-link"
+            style="--ql-c: #bd00ff"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <span>İletişim</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Aşağı kaydır ipucu -->
+      <a href="#deep" class="scroll-hint" aria-label="Aşağı kaydır">
+        <span></span>
+      </a>
     </header>
 
     <footer id="deep">
-        <p>&copy; 2026 Voxel Forge. Ali Berk ve Prism Crew tarafından kodlandı. | <strong>TÜM HAKLARI SAKLIDIR</strong></p>
+      <p>
+        &copy; 2026 Voxel Forge. Ali Berk ve Prism Crew tarafından kodlandı. |
+        <strong>TÜM HAKLARI SAKLIDIR</strong>
+      </p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script src="scripts/js/main.js"></script>
+    <script src="scripts/js/stats.js"></script>
+  </body>
 </html>

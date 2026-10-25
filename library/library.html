@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080711">
+    <meta name="description" content="Voxel Forge içerik kütüphanesi. Modları, kaynak paketlerini, veri paketlerini ve shader paketlerini keşfet.">
+
+    <title>İçerik Kütüphanesi - Voxel Forge</title>
+
+    <link rel="icon" type="image/png" href="../art/VoxelForge.png">
+    <link rel="stylesheet" href="library.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="networkCanvas" aria-hidden="true"></canvas>
+
+    <nav class="navbar glass">
+        <a class="logo" href="../index.html">
+            <img src="../art/VoxelForge.png" alt="" class="logo-img">
+            <span>VOXEL <span class="logo-accent">FORGE</span></span>
+        </a>
+
+        <button class="mobile-menu-button" id="mobileMenuButton"
+                type="button" aria-label="Menüyü aç"
+                aria-expanded="false" aria-controls="navLinks">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="../FNF/FNF.html">FNF</a></li>
+            <li><a href="library.html" class="active" aria-current="page">Kütüphane</a></li>
+            <li><a href="../bots/bots.html">Botlar</a></li>
+            <li><a href="../games/games.html">Oyunlar</a></li>
+            <li><a href="../sites/sites.html">Siteler</a></li>
+            <li><a href="../about/about.html">Hakkımda</a></li>
+            <li><a href="../contact/contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-container">
+        <header class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-cubes"></i>
+                VOXEL FORGE / KÜTÜPHANE
+            </div>
+
+            <h1 class="hero-title">
+                İÇERİK <span class="gradient-text">KÜTÜPHANESİ</span>
+            </h1>
+
+            <p class="hero-description">
+                Prism Crew Studio projelerini ve topluluk içeriklerini keşfet.
+                Yeni fikirler, yeni deneyimler ve keşfedilecek yeni dünyalar burada.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat-card glass">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <div>
+                        <strong id="totalMods">0</strong>
+                        <span>Toplam İçerik</span>
+                    </div>
+                </div>
+
+                <div class="stat-card glass">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <div>
+                        <strong id="totalGames">0</strong>
+                        <span>Oyun</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="library-section" aria-labelledby="libraryTitle">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">PROJELERİ KEŞFET</span>
+                    <h2 id="libraryTitle">İçerik Kütüphanesi</h2>
+                    <p>Kategori seç, içerikleri keşfet ve aradığın projeyi bul.</p>
+                </div>
+
+                <span class="library-count" id="resultCount">0 sonuç</span>
+            </div>
+
+            <!-- İçerik kategorileri -->
+            <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="İçerik kategorileri">
+                <button
+                    class="category-tab active"
+                    id="category-tab-mods"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="modGrid"
+                    data-category="mods"
+                >
+                    <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+                    <span>Modlar</span>
+                </button>
+
+                <button
+                    class="category-tab"
+                    id="category-tab-resources"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="modGrid"
+                    data-category="resources"
+                >
+                    <i class="fa-solid fa-images" aria-hidden="true"></i>
+                    <span>Kaynak Paketleri</span>
+                </button>
+
+                <button
+                    class="category-tab"
+                    id="category-tab-data"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="modGrid"
+                    data-category="data"
+                >
+                    <i class="fa-solid fa-database" aria-hidden="true"></i>
+                    <span>Veri Paketleri</span>
+                </button>
+
+                <button
+                    class="category-tab"
+                    id="category-tab-shaders"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="modGrid"
+                    data-category="shaders"
+                >
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                    <span>Shader Paketleri</span>
+                </button>
+            </div>
+
+            <div class="filter-panel glass">
+                <label class="search-box" for="modSearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        id="modSearch"
+                        type="search"
+                        placeholder="İçerik adı, açıklama veya etiket ara..."
+                        autocomplete="off"
+                    >
+                    <kbd>ARA</kbd>
+                </label>
+
+                <label class="filter-control" for="gameFilter">
+                    <span>Oyun</span>
+                    <select id="gameFilter">
+                        <option value="all">Tüm oyunlar</option>
+                        <option value="minecraft_java">Minecraft Java Edition</option>
+                        <option value="minecraft_bedrock">Minecraft Bedrock Edition</option>
+                    </select>
+                </label>
+
+                <button class="reset-button" id="resetFilters" type="button">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Sıfırla
+                </button>
+            </div>
+
+            <div class="active-filters" id="activeFilters" hidden></div>
+
+            <div class="mod-grid" id="modGrid" aria-live="polite" aria-busy="true">
+                <div class="state-card glass">
+                    <span class="loading-spinner"></span>
+                    <h3>Kütüphane hazırlanıyor...</h3>
+                    <p>Yeni keşifler için son hazırlıklar yapılıyor.</p>
+                </div>
+            </div>
+
+            <noscript>
+                <div class="state-card glass">
+                    <h3>JavaScript gerekli</h3>
+                    <p>İçerik listesini görüntülemek için JavaScript'i etkinleştir.</p>
+                </div>
+            </noscript>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <img src="../art/VoxelForge.png" alt="" class="footer-logo">
+            <span>VOXEL FORGE</span>
+        </div>
+
+        <p>
+            &copy; 2026 Voxel Forge.
+            Ali Berk ve Prism Crew tarafından kodlandı.
+            <strong>TÜM HAKLARI SAKLIDIR.</strong>
+        </p>
+
+        <span class="footer-caption">BUILT WITH 💜 BY PRISM CREW STUDIO</span>
+    </footer>
+
+    <script src="../scripts/js/main.js" defer></script>
+    <script src="../scripts/js/pages/LIBRARY.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voxel Forge - FNF Modları</title>
+
+    <link rel="stylesheet" href="FNF.css">
+    <link rel="icon" type="image/png" href="../art/VoxelForge.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+</head>
+
+<body>
+    <canvas id="networkCanvas"></canvas>
+
+    <nav class="navbar glass">
+        <div class="logo">
+            <img
+                src="../art/VoxelForge.png"
+                alt="Voxel Forge"
+                class="logo-img"
+            >
+            VOXEL FORGE
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="FNF.html" class="active">FNF</a></li>
+            <li><a href="../library/library.html">Kütüphane</a></li>
+            <li><a href="../bots/bots.html">Botlar</a></li>
+            <li><a href="../games/games.html">Oyunlar</a></li>
+            <li><a href="../sites/sites.html">Siteler</a></li>
+            <li><a href="../about/about.html">Hakkımda</a></li>
+            <li><a href="../contact/contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- SAYFA BAŞLIĞI -->
+        <header class="page-header">
+            <span class="fnf-badge">
+                <i class="fa-solid fa-microphone-lines"></i>
+                FRIDAY NIGHT FUNKIN'
+            </span>
+
+            <h1 class="pixel-title">FNF MODLARI</h1>
+
+            <p class="glass-text">
+                Friday Night Funkin' için geliştirdiğim özel modlar,
+                engine'lar, bot sistemleri ve mobil portlar.
+                Notalar düşüyor, hazır mısın?
+            </p>
+
+            <div class="arrow-strip" aria-hidden="true">
+                <span class="arrow arrow-left">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </span>
+
+                <span class="arrow arrow-down">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </span>
+
+                <span class="arrow arrow-up">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </span>
+
+                <span class="arrow arrow-right">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+        </header>
+
+        <!-- FİLTRELER -->
+        <div class="filter-bar" role="group" aria-label="Mod filtresi">
+            <button
+                type="button"
+                class="filter-btn active"
+                data-filter="all"
+                aria-pressed="true"
+            >
+                <i class="fa-solid fa-layer-group"></i>
+                Tümü
+                <span class="count">0</span>
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="released"
+                aria-pressed="false"
+            >
+                <i class="fa-solid fa-circle-check"></i>
+                Yayınlandı
+                <span class="count">0</span>
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="dev"
+                aria-pressed="false"
+            >
+                <i class="fa-solid fa-hammer"></i>
+                Geliştiriliyor
+                <span class="count">0</span>
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="halted"
+                aria-pressed="false"
+            >
+                <i class="fa-solid fa-ban"></i>
+                Durduruldu
+                <span class="count">0</span>
+            </button>
+        </div>
+
+        <!-- MOD KARTLARI: fnf.js TARAFINDAN OLUŞTURULUR -->
+        <section
+            class="content-grid"
+            id="modGrid"
+            aria-label="Friday Night Funkin' modları"
+            aria-live="polite"
+        >
+            <noscript>
+                Modları görüntülemek için JavaScript etkin olmalıdır.
+            </noscript>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Voxel Forge.
+            Ali Berk ve Prism Crew tarafından kodlandı.
+            |
+            <strong>TÜM HAKLARI SAKLIDIR</strong>
+        </p>
+    </footer>
+
+    <!-- ORTAK ARKA PLAN ANİMASYONU -->
+    <script src="../scripts/js/main.js" defer></script>
+
+    <!-- FNF SAYFASININ MODÜLER KODU -->
+    <script
+        type="module"
+        src="../scripts/js/pages/FNF.js"
+    ></script>
+</body>
+</html>
