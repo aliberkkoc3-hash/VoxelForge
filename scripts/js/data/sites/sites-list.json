@@ -38,20 +38,39 @@
     ]
   },
   {
-    "id": "pixelpulse",
-    "name": "PixelPulse",
-    "description": "Pixel Devs projelerinin çalışma sürelerini, ping değerlerini ve sistem durumlarını takip eden status arayüzü.",
+    "id": "vibrix",
+    "name": "Vibrix",
+    "description": "Vibrix, FNF tarzından ve OSUU tarzından ilham alan; özel chartları, 3D oynanışı ve rekabetçi liderlik tablosuyla ritim yeteneklerini test edebileceğin bir ritim oyunudur.",
+    "status": "active",
+    "tags": ["HTML", "CSS", "JS", "SQL", "RENDER", "BACK-END", "FRONT-END", "FULLSTACK", "GAME", "FNF", "OSUU"],
+    "links": [
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aliberkkoc3-hash/Vibrix",
+        "icon": "fa-brands fa-github"
+      },
+      {
+        "label": "Canlı Site",
+        "url": "https://vibrix.onrender.com",
+        "icon": "fa-solid fa-globe"
+      }
+    ]
+  },
+  {
+    "id": "prrismpulse",
+    "name": "PrismPulse",
+    "description": "Prism Crew projelerinin çalışma sürelerini, ping değerlerini ve sistem durumlarını takip eden status arayüzü.",
     "status": "active",
     "tags": ["HTML", "CSS", "JS", "RENDER", "UPTIMEROBOT API"],
     "links": [
       {
         "label": "GitHub Repo",
-        "url": "https://github.com/aliberkkoc3-hash/PixelPulse",
+        "url": "https://github.com/aliberkkoc3-hash/PrismPulse",
         "icon": "fa-brands fa-github"
       },
       {
         "label": "Canlı Site",
-        "url": "https://pixelpulse-xdjk.onrender.com",
+        "url": "https://prismpulse-nzvf.onrender.com",
         "icon": "fa-solid fa-globe"
       }
     ]
