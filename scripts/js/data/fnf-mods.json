@@ -57,12 +57,7 @@
         }
       ],
       "note": "Psych Engine'a benzer yapıda ama tamamen bağımsız bir engine'dır.",
-      "tags": [
-        "Custom Engine",
-        "Görev Sistemi",
-        "Market",
-        "Açık Beta"
-      ],
+      "tags": ["Custom Engine", "Görev Sistemi", "Market", "Açık Beta"],
       "buttons": [
         {
           "label": "Açık Beta Henüz Çıkmadı",
@@ -126,11 +121,7 @@
         "Spare.lua",
         "WelcomeHell.lua"
       ],
-      "tags": [
-        "Psych Engine(P-SLICE)",
-        "BotPlay",
-        "VSCHARA 2.0"
-      ],
+      "tags": ["Psych Engine(P-SLICE)", "BotPlay", "VSCHARA 2.0"],
       "buttons": [
         {
           "label": "MediaFire",
@@ -245,11 +236,7 @@
           "text": "Offline"
         }
       ],
-      "tags": [
-        "FunkLab",
-        "V-Slice 0.8.6",
-        "Protokol-66"
-      ],
+      "tags": ["FunkLab", "V-Slice 0.8.6", "Protokol-66"],
       "buttons": [
         {
           "label": "MediaFire",
@@ -359,7 +346,7 @@
           "text": "Zaman Çubuğu"
         },
         {
-          "icon":"fa-solid fa-gamepad",
+          "icon": "fa-solid fa-gamepad",
           "text": "V-SLICE"
         },
         {
@@ -559,6 +546,274 @@
       "details": {
         "title": "👻 BFAliGhostAura — İzini Bırak, Aura'nı Hisset!",
         "body": "<h4>👻 Her Notadan Sonra Hayalet İzler!</h4>\n<p><strong>BFAliGhostAura</strong>, Friday Night Funkin' V-Slice için geliştirilen, karakterlerin başarılı nota vuruşları sırasında cyan tonlarında hayalet izleri oluşturan görsel efekt modudur! 💠 Karakter hareketlerine geçici bir iz efekti ekleyerek oynanışa daha dinamik ve atmosferik bir görünüm kazandırır.</p>\n<p>Parlak cyan efektleri ve karakterlerin hareketlerini takip eden hayalet izleriyle ritim deneyimine farklı bir görsel dokunuş kat! 🎵✨</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>👻 Hayalet İz Efekti:</strong> Başarılı nota vuruşları sırasında karakterin arkasında geçici hayalet görüntüleri oluşturur.</li>\n<li><strong>💠 Cyan Görsel Tasarım:</strong> Mavi ve cyan tonlarıyla karakter animasyonlarına özgün bir görünüm kazandırır.</li>\n<li><strong>🎵 Nota Vuruşlarına Tepki:</strong> Efektleri başarılı karakter nota vuruşlarıyla ilişkilendirerek oynanışa görsel hareketlilik ekler.</li>\n<li><strong>🖥️ Masaüstü Yapılandırması:</strong> Masaüstü için iz uzunluğu, saydamlık, solma süresi ve ek görsel hareket efektleri gibi ayarlar sunar.</li>\n<li><strong>📱 Mobil Optimizasyon:</strong> Daha kısa izler ve daha hafif efekt ayarlarıyla mobil cihazlarda daha uygun bir kullanım hedefler.</li>\n<li><strong>⚙️ Modüler HaxeC Yapısı:</strong> Efekt ve yapılandırma bileşenlerini ayrı modüller üzerinden düzenler.</li>\n<li><strong>🧩 Ayarlanabilir Efektler:</strong> İz uzunluğu, başlangıç saydamlığı ve solma süresi gibi parametrelerle efekt davranışını yapılandırmaya imkân tanır.</li>\n</ul>\n<h4>🎮 Nasıl Çalışır?</h4>\n<p>BFAliGhostAura, desteklenen karakter nota vuruşları sırasında hayalet iz efektlerini devreye sokar. Oluşturulan izler zamanla saydamlaşarak kaybolur ve karakter hareketlerinin arkasında kısa süreli görsel bir iz bırakır. 👻</p>\n<h4>🖥️ Masaüstü ve Mobil Deneyim</h4>\n<p><strong>🖥️ Masaüstü:</strong> Daha uzun izler, belirgin saydamlık ve ek hareket efektleriyle daha yoğun bir görsel deneyim sunacak şekilde yapılandırılabilir.</p>\n<p><strong>📱 Mobil:</strong> Daha kısa izler ve azaltılmış hareket efektleriyle performansı gözeten bir yapılandırma kullanır.</p>\n<h4>🎨 Neden BFAliGhostAura?</h4>\n<p>Ritim oyunlarında görsel efektler, karakter hareketlerine ayrı bir atmosfer katabilir! <strong>BFAliGhostAura</strong>, yeni karakterler veya şarkılar eklemek yerine mevcut karakter animasyonlarına odaklanır. Cyan hayalet izleriyle başarılı nota vuruşlarını daha dikkat çekici hâle getirmeyi ve oynanışa kendine özgü bir stil kazandırmayı amaçlar. 💙</p>\n<h4>🛠️ Teknik Yapı</h4>\n<p>HaxeC ile geliştirilen proje, masaüstü ve mobil cihazlar için ayrı efekt yapılandırmaları kullanır. Bu yaklaşım, görsel yoğunluğun platforma göre ayarlanmasına ve efekt davranışının daha kontrollü yönetilmesine yardımcı olur. 🧩</p>\n<h4>💜 Geliştirici ve Proje</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen BFAliGhostAura, <strong>Prism Crew Studio</strong> desteğiyle hazırlanan bağımsız bir Friday Night Funkin' mod projesidir.</p>\n<p><em>👻 İzini Bırak, Aura'nı Hisset!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    },
+    {
+      "id": "bfalinotecolors",
+      "name": "BFAliNoteColors",
+      "icon": "fa-solid fa-palette",
+      "status": "released",
+      "version": "v1.0.0",
+      "tagline": "Notalarını BFAli Renklerine göre Özelleştir!",
+      "meta": [
+        {
+          "icon": "fa-solid fa-palette",
+          "text": "Custom Note Colors"
+        },
+        {
+          "icon": "fa-solid fa-droplet",
+          "text": "Color Customization"
+        },
+        {
+          "icon": "fa-solid fa-music",
+          "text": "FnF"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "HaxeC"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-Slice"
+        }
+      ],
+      "tags": [
+        "FnF",
+        "Friday Night Funkin",
+        "Note Colors",
+        "Custom Colors",
+        "Color Customization",
+        "Arrow Colors",
+        "FNF Mod",
+        "Modding",
+        "BFAli"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/g06tqoxfqw0m0u4/BFAliNoteColors.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/BFAliNoteColors/releases/tag/0.0.1",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/BFAliNoteColors",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "🎨 BFAliNoteColors — Notalarını Kendi Renklerinle Özelleştir!",
+        "body": "<h4>🎨 Renkler Artık Senin Kontrolünde!</h4>\n<p><strong>BFAliNoteColors</strong>, Friday Night Funkin' için geliştirilen, nota oklarının renklerini kişiselleştirmeye odaklanan bir mod projesidir! 🎵 Kendi renk kombinasyonlarını oluşturarak oyun deneyimine özgün bir görünüm kazandır.</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>🎨 Özel Nota Renkleri:</strong> Nota oklarının renklerini kendi tercihlerine göre düzenle.</li>\n<li><strong>🌈 Renk Özelleştirme:</strong> Farklı renk kombinasyonları oluşturarak kendine özgü bir stil belirle.</li>\n<li><strong>🖌️ Kişisel Renk Paletleri:</strong> Kendi renk tasarımlarını oluştur.</li>\n<li><strong>🎵 Friday Night Funkin' Desteği:</strong> FNF deneyimine görsel kişiselleştirme ekler.</li>\n<li><strong>⚙️ Kolay Yapılandırma:</strong> Nota renklerini kendi tercihlerine göre yönet.</li>\n</ul>\n<h4>🎮 Neden BFAliNoteColors?</h4>\n<p>Herkesin oyun tarzı farklı! <strong>BFAliNoteColors</strong>, standart nota renklerinin dışına çıkarak kendi renklerini kullanmana olanak tanır. Kendi paletini oluştur, notalarını kişiselleştir ve oyununa kendi imzanı at! 🌈</p>\n<h4>💜 Geliştirici ve Proje</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen BFAliNoteColors, <strong>Prism Crew Studio</strong> bünyesinde hazırlanan bağımsız bir Friday Night Funkin' mod projesidir.</p>\n<p><em>🎨 Renklerini Seç, Tarzını Yansıt!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    },
+    {
+      "id": "prismdebug",
+      "name": "PrismDebug",
+      "icon": "fa-solid fa-bug",
+      "status": "released",
+      "version": "v0.0.1",
+      "tagline": "Debug Sürecini Kontrol Altına Al!",
+      "meta": [
+        {
+          "icon": "fa-solid fa-bug",
+          "text": "Debug Panel"
+        },
+        {
+          "icon": "fa-solid fa-keyboard",
+          "text": "F6 Shortcuts"
+        },
+        {
+          "icon": "fa-solid fa-layer-group",
+          "text": "Advanced Panel"
+        },
+        {
+          "icon": "fa-solid fa-music",
+          "text": "FnF"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "Haxe"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-Slice"
+        }
+      ],
+      "tags": [
+        "FnF",
+        "Friday Night Funkin",
+        "PrismDebug",
+        "Debug Panel",
+        "Advanced Debug",
+        "Developer Tools",
+        "FNF Mod",
+        "Modding",
+        "Haxe",
+        "Prism Crew"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/1otufigpkiuzqas/PrismDebug.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/Prism-Debug/releases/tag/0.0.1",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/Prism-Debug",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "🛠️ PrismDebug — Debug Sürecini Kontrol Altına Al!",
+        "body": "<h4>🛠️ FNF Debug Paneli Yeniden Tasarlandı!</h4>\n<p><strong>PrismDebug</strong>, Friday Night Funkin' için geliştirilen ve oyunun orijinal Debug panelini kendi arayüzüyle değiştiren bir geliştirme aracıdır! Geliştirilmiş panel yapısı ve farklı erişim seçenekleriyle Debug deneyimini yeniden şekillendirir. ⚙️</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>🛠️ Yenilenmiş Debug Paneli:</strong> Orijinal FNF Debug arayüzünü PrismDebug paneliyle değiştirir.</li>\n<li><strong>⚡ Hızlı Erişim:</strong> F6 tuşuyla ana Debug panelini aç.</li>\n<li><strong>🔍 Detaylı Debug Paneli:</strong> CTRL + F6 kombinasyonuyla detaylı panele eriş.</li>\n<li><strong>🎮 FNF Entegrasyonu:</strong> Oyunun mevcut Debug sistemini temel alır.</li>\n<li><strong>🧩 İki Farklı Panel:</strong> İhtiyacına göre hızlı veya detaylı Debug arayüzünü kullan.</li>\n</ul>\n<h4>⌨️ Klavye Kısayolları</h4>\n<ul>\n<li><strong>F6:</strong> Ana Debug panelini açar.</li>\n<li><strong>CTRL + F6:</strong> Detaylı Debug panelini açar.</li>\n</ul>\n<h4>🎮 Neden PrismDebug?</h4>\n<p>Friday Night Funkin'in standart Debug panelini farklı bir arayüzle kullanmak isteyenler için geliştirilen <strong>PrismDebug</strong>, iki farklı panel erişimiyle geliştirme sürecini daha pratik hâle getirmeyi amaçlar. 🛠️</p>\n<h4>💜 Geliştirici ve Proje</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen PrismDebug, <strong>Prism Crew Studio</strong> bünyesinde hazırlanan bağımsız bir Friday Night Funkin' mod projesidir.</p>\n<p><em>🛠️ Debug Et, İncele, Geliştir!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    },
+    {
+      "id": "ghosttapping",
+      "name": "GhostTapping",
+      "icon": "fa-solid fa-ghost",
+      "status": "released",
+      "version": "v0.0.1",
+      "tagline": "Ghost Tapping Kontrolü Artık Sende!",
+      "meta": [
+        {
+          "icon": "fa-solid fa-ghost",
+          "text": "Ghost Tapping"
+        },
+        {
+          "icon": "fa-solid fa-keyboard",
+          "text": "F7 Toggle"
+        },
+        {
+          "icon": "fa-solid fa-music",
+          "text": "FnF"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "text": "HaxeC"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "V-Slice"
+        }
+      ],
+      "tags": [
+        "FnF",
+        "Friday Night Funkin",
+        "Ghost Tapping",
+        "FNF Mod",
+        "Gameplay",
+        "Toggle",
+        "HaxeC",
+        "Modding",
+        "BFAli"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/dcwwkz57ake0nzh/GhostTapping.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/GhostTapping/releases/tag/0.0.1",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/GhostTapping",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "👻 GhostTapping — Ghost Tapping Kontrolü Artık Sende!",
+        "body": "<h4>👻 Ghost Tapping Kontrolü Elinde!</h4>\n<p><strong>GhostTapping</strong>, Friday Night Funkin' için geliştirilen ve Ghost Tapping özelliğini oyun içerisinden açıp kapatmanı sağlayan bir mod projesidir! 🎵</p>\n<h4>🚀 Öne Çıkan Özellikler</h4>\n<ul>\n<li><strong>👻 Ghost Tapping Kontrolü:</strong> Ghost Tapping özelliğini istediğin zaman aç veya kapat.</li>\n<li><strong>⚡ Hızlı Erişim:</strong> F7 tuşuyla özelliği kolayca değiştir.</li>\n<li><strong>🔄 Anlık Geçiş:</strong> Oyun sırasında ayarı kontrol et.</li>\n<li><strong>🎮 Kolay Kullanım:</strong> Tek tuşla pratik kontrol.</li>\n</ul>\n<h4>⌨️ Klavye Kısayolları</h4>\n<ul>\n<li><strong>F7:</strong> Ghost Tapping Aç / Kapat.</li>\n</ul>\n<h4>🎮 Neden GhostTapping?</h4>\n<p>Ghost Tapping ayarını değiştirmek için menülerle uğraşmana gerek yok! <strong>GhostTapping</strong> sayesinde tek bir tuşla kontrolü eline al ve oyun tarzını kendin belirle. 👻</p>\n<h4>💜 Geliştirici ve Proje</h4>\n<p><strong>BF_AliBerk_BF</strong> tarafından geliştirilen GhostTapping, <strong>Prism Crew Studio</strong> bünyesinde hazırlanan bağımsız bir Friday Night Funkin' mod projesidir.</p>\n<p><em>👻 Kontrol Sende, Ritim Seninle!</em></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
+      }
+    },
+    {
+      "id": "prisarchive-songs",
+      "name": "PRISArchive Songs",
+      "icon": "fa-solid fa-box-archive",
+      "status": "released",
+      "version": "v0.0.1",
+      "tagline": "Normal Şarkılar, Anormal Miktarda Nota. 💀",
+      "meta": [
+        {
+          "icon": "fa-solid fa-music",
+          "text": "4 Songs"
+        },
+        {
+          "icon": "fa-solid fa-robot",
+          "text": "Auto Charts"
+        },
+        {
+          "icon": "fa-solid fa-skull",
+          "text": "Spam Charts"
+        },
+        {
+          "icon": "fa-solid fa-puzzle-piece",
+          "text": "EventsPlus Included"
+        },
+        {
+          "icon": "fa-solid fa-gamepad",
+          "text": "Friday Night Funkin'"
+        }
+      ],
+      "tags": [
+        "FnF",
+        "Friday Night Funkin",
+        "PRISArchive",
+        "Prism Crew",
+        "Auto Charts",
+        "Spam Charts",
+        "AutoCharter",
+        "EventsPlus",
+        "FNF Songs",
+        "FNF Mod",
+        "Chart Pack",
+        "Modding"
+      ],
+      "buttons": [
+        {
+          "label": "MediaFire",
+          "icon": "fa-solid fa-cloud-arrow-down",
+          "url": "https://www.mediafire.com/file/i8ofx6u2hnd161b/mods.zip/file",
+          "variant": "mediafire"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa-brands fa-github",
+          "url": "https://github.com/aliberkkoc3-hash/PRISArchive-Songs/releases/tag/0.0.1",
+          "variant": "github"
+        },
+        {
+          "label": "Kaynak Kod",
+          "icon": "fa-solid fa-code-branch",
+          "url": "https://github.com/aliberkkoc3-hash/PRISArchive-Songs",
+          "variant": "ghost"
+        }
+      ],
+      "details": {
+        "title": "💀 PRISArchive Songs — Normal Şarkılar, Anormal Miktarda Nota!",
+        "body": "<h4>🚫 BURAYI OKUMAMAN GEREKİYORDU.</h4>\n<p>Madem buradasın, arşive hoş geldin. 💀</p>\n<p><strong>PRISArchive Songs</strong>, Prism Crew tarafından hazırlanan normal şarkıları ve Spam Chart içeriklerini aynı mod paketinde buluşturan bir Friday Night Funkin' arşividir. Nota yağmuruna hazır ol!</p>\n<h4>🎵 Arşivde Neler Var?</h4>\n<p>Arşivde iki farklı chart zorluğu bulunuyor:</p>\n<ul>\n<li><strong>🤖 AUTO:</strong> AutoCharter tarafından hazırlanmış normal chartlar.</li>\n<li><strong>💀 SPAM:</strong> Bol miktarda nota ve yoğun oynanış içeren özel chartlar.</li>\n</ul>\n<h4>🎼 Şarkı Listesi</h4>\n<h4>🤖 AUTO</h4>\n<ul>\n<li>Finale</li>\n<li>Megalo Strike Back</li>\n<li>Megalovania</li>\n</ul>\n<h4>💀 SPAM</h4>\n<ul>\n<li>Despacito</li>\n</ul>\n<h4>⚙️ EventsPlus — Birleşik Paket</h4>\n<p><strong>EventsPlus</strong>, PRISArchive Songs ile birlikte sunulan ve Prism Crew modlu chartları için tasarlanmış özel eventleri içeren bir Dependency paketidir.</p>\n<p>EventsPlus, arşivle birlikte kullanılmak üzere hazırlanmıştır. Bazı özel eventlerin düzgün çalışabilmesi için gereklidir.</p>\n<h4>📦 Kurulum</h4>\n<ul>\n<li>PRISArchive Songs paketini FNF mod klasörüne yerleştir.</li>\n<li>EventsPlus dosyalarını da mod klasörüne kur.</li>\n<li>Her iki paketin de doğru yerleştirildiğinden emin ol.</li>\n<li>Oyunu başlat ve arşivin keyfini çıkar!</li>\n</ul>\n<h4>⚠️ Önemli Notlar</h4>\n<ul>\n<li>EventsPlus, arşivin gerekli bağımlılığıdır.</li>\n<li>EventsPlus olmadan bazı özel chart eventleri çalışmayabilir.</li>\n<li>Spam chartlar yoğun nota içerikleriyle tasarlanmıştır.</li>\n</ul>\n<h4>💎 Prism Crew</h4>\n<p>PRISArchive Songs, <strong>Prism Crew</strong> tarafından hazırlanan bağımsız bir Friday Night Funkin' mod paketidir.</p>\n<p><em>Normal şarkılar, anormal miktarda nota.</em></p>\n<p><strong>Made with Prism Crew. 💎</strong></p>\n<p><strong>© 2026 Prism Crew Studio</strong></p>"
       }
     }
   ]
